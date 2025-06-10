@@ -1,1 +1,1 @@
-# krzy.io
+# krzy.io | krzy.ai 
