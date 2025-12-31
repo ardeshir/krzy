@@ -1,0 +1,28 @@
+baseURL = "https://krzy.ai/"
+languageCode = "en-us"
+title = "krzy.ai"
+theme = ""
+
+[params]
+  description = "The Critic's Mirror - Self-analysis for builders"
+  author = "sepahsalar"
+  tagline = "Who benefits from this machine?"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Univrs.io"
+    url = "https://univrs.io"
+    weight = 3

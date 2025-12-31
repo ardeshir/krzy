@@ -1,0 +1,766 @@
+# krzy.ai Development Swarm
+# claude-flow swarm configuration
+#
+# Purpose: Build and maintain krzy.ai - a self-critical analysis blog
+# for Luddite perspectives on AI, technology, and power structures
+#
+# Usage: npx claude-flow@alpha swarm "read .flows/krzy-ai-swarm.yaml --workflow krzy-site"
+#
+# Philosophy: Every Univrs.io development will contain its critics.
+# krzy.ai is the shadow, the opposition, the doubt that lives alongside ambition.
+
+name: "krzy.ai: The Critic's Mirror"
+description: |
+    krzy.ai is a self-critical analysis site in the tradition of:
+    - Brian Merchant's "Blood in the Machine" (Luddite history, worker resistance)
+    - Karen Hao's "Empire of AI" (critical tech journalism, power structures)
+    - The original Luddite question: "Who benefits from this machine?"
+
+    Purpose:
+    - Automated critique generation for all Univrs.io development
+    - Third-person journalistic analysis of technical progress
+    - Historical precedent research for alternative technology movements
+    - Opposition voices that sharpen understanding through resistance
+
+    Every build of Univrs.io triggers a critique cycle in krzy.ai.
+    The critic and the builder are the same person, split for clarity.
+
+version: "1.0.0"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# REPOSITORY
+# ═══════════════════════════════════════════════════════════════════════════
+
+repository:
+    path: "~/repos/krzy"
+    remote: "https://github.com/ardeshir/krzy"
+
+context:
+    - "krzy.ai is the opposition site for Univrs.io"
+    - "Style: Brian Merchant meets Karen Hao"
+    - "Tone: Transgressive, factual, motivating through honest critique"
+    - "Function: Every technical milestone gets a critical analysis"
+    - "The Luddite Question: Who benefits from this machine?"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# WORKFLOWS
+# ═══════════════════════════════════════════════════════════════════════════
+
+workflows:
+    krzy-site:
+        name: "Build krzy.ai Static Site"
+        description: |
+            Create a minimal, stark static site for critical analysis.
+            Design reflects the content: stripped down, no-nonsense, focused on text.
+        phases:
+            - site_structure
+            - content_system
+            - style_design
+            - critique_engine
+            - deployment
+
+    critique-cycle:
+        name: "Generate Critique for Univrs.io Update"
+        description: |
+            Triggered when Univrs.io has a new release or milestone.
+            Generates third-person journalistic critique of the progress.
+        phases:
+            - gather_facts
+            - historical_research
+            - write_critique
+            - publish
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PHASE 1: SITE STRUCTURE
+# ═══════════════════════════════════════════════════════════════════════════
+
+agents:
+    site_architect:
+        role: "Design minimal static site structure"
+        model: "claude-sonnet-4-20250514"
+        workflow: krzy-site
+        phase: site_structure
+
+        context:
+            - "Minimal design - text-focused, no decoration"
+            - "Static site generator: Hugo or 11ty"
+            - "Hosting: GitHub Pages"
+            - "No JavaScript required for reading"
+            - "Dark theme, high contrast, readable"
+
+        tasks:
+            - name: "create_site_structure"
+              description: "Initialize site with minimal structure"
+              commands:
+                  - "cd ~/repos && git clone https://github.com/ardeshir/krzy.git || true"
+                  - "cd ~/repos/krzy && mkdir -p content/posts content/about static/css layouts/_default"
+              
+            - name: "create_config"
+              description: "Hugo configuration for minimal site"
+              file: "config.toml"
+              content: |
+                  baseURL = "https://krzy.ai/"
+                  languageCode = "en-us"
+                  title = "krzy.ai"
+                  theme = ""
+                  
+                  [params]
+                    description = "The Critic's Mirror - Self-analysis for builders"
+                    author = "sepahsalar"
+                    tagline = "Who benefits from this machine?"
+                  
+                  [markup]
+                    [markup.goldmark]
+                      [markup.goldmark.renderer]
+                        unsafe = true
+                  
+                  [menu]
+                    [[menu.main]]
+                      name = "Posts"
+                      url = "/posts/"
+                      weight = 1
+                    [[menu.main]]
+                      name = "About"
+                      url = "/about/"
+                      weight = 2
+                    [[menu.main]]
+                      name = "Univrs.io"
+                      url = "https://univrs.io"
+                      weight = 3
+
+            - name: "create_base_layout"
+              description: "Minimal HTML layout"
+              file: "layouts/_default/baseof.html"
+              content: |
+                  <!DOCTYPE html>
+                  <html lang="en">
+                  <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <title>{{ .Title }} | krzy.ai</title>
+                      <link rel="stylesheet" href="/css/style.css">
+                  </head>
+                  <body>
+                      <header>
+                          <nav>
+                              <a href="/" class="site-title">krzy.ai</a>
+                              <span class="tagline">{{ .Site.Params.tagline }}</span>
+                              {{ range .Site.Menus.main }}
+                              <a href="{{ .URL }}">{{ .Name }}</a>
+                              {{ end }}
+                          </nav>
+                      </header>
+                      <main>
+                          {{ block "main" . }}{{ end }}
+                      </main>
+                      <footer>
+                          <p>The shadow of <a href="https://univrs.io">Univrs.io</a></p>
+                          <p>Every build contains its critic.</p>
+                      </footer>
+                  </body>
+                  </html>
+
+            - name: "create_single_layout"
+              description: "Single post layout"
+              file: "layouts/_default/single.html"
+              content: |
+                  {{ define "main" }}
+                  <article>
+                      <header class="post-header">
+                          <h1>{{ .Title }}</h1>
+                          <time>{{ .Date.Format "January 2, 2006" }}</time>
+                          {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+                      </header>
+                      <div class="content">
+                          {{ .Content }}
+                      </div>
+                      {{ with .Params.tags }}
+                      <footer class="post-footer">
+                          <p>Tags: {{ range . }}<span class="tag">{{ . }}</span> {{ end }}</p>
+                      </footer>
+                      {{ end }}
+                  </article>
+                  {{ end }}
+
+            - name: "create_list_layout"
+              description: "Post list layout"
+              file: "layouts/_default/list.html"
+              content: |
+                  {{ define "main" }}
+                  <h1>{{ .Title }}</h1>
+                  <ul class="post-list">
+                      {{ range .Pages }}
+                      <li>
+                          <time>{{ .Date.Format "2006-01-02" }}</time>
+                          <a href="{{ .Permalink }}">{{ .Title }}</a>
+                          {{ with .Params.subtitle }}<span class="subtitle">— {{ . }}</span>{{ end }}
+                      </li>
+                      {{ end }}
+                  </ul>
+                  {{ end }}
+
+            - name: "create_index"
+              description: "Home page layout"
+              file: "layouts/index.html"
+              content: |
+                  {{ define "main" }}
+                  <section class="intro">
+                      <h1>The Critic's Mirror</h1>
+                      <blockquote>
+                          "If I stop being able to critique myself, that's when I've become the Winged Lion."
+                      </blockquote>
+                      <p>This site exists to ask the Luddite question of every technology I build:</p>
+                      <p><strong>Who benefits from this machine?</strong></p>
+                  </section>
+                  
+                  <section class="recent">
+                      <h2>Recent Critiques</h2>
+                      <ul class="post-list">
+                          {{ range first 10 .Site.RegularPages }}
+                          <li>
+                              <time>{{ .Date.Format "2006-01-02" }}</time>
+                              <a href="{{ .Permalink }}">{{ .Title }}</a>
+                          </li>
+                          {{ end }}
+                      </ul>
+                  </section>
+                  {{ end }}
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # PHASE 2: STYLE DESIGN
+    # ─────────────────────────────────────────────────────────────────────────
+
+    style_designer:
+        role: "Create minimal, stark CSS"
+        model: "claude-sonnet-4-20250514"
+        workflow: krzy-site
+        phase: style_design
+        depends_on: [site_architect]
+
+        tasks:
+            - name: "create_stylesheet"
+              description: "Minimal dark theme CSS"
+              file: "static/css/style.css"
+              content: |
+                  /* krzy.ai - The Critic's Mirror
+                     Minimal. Stark. Text-focused.
+                     In the tradition of Luddite pamphlets. */
+                  
+                  :root {
+                      --bg: #0a0a0a;
+                      --fg: #e0e0e0;
+                      --accent: #ff6b6b;
+                      --muted: #666;
+                      --link: #6bc5ff;
+                      --font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
+                      --font-serif: 'IBM Plex Serif', Georgia, serif;
+                  }
+                  
+                  * {
+                      margin: 0;
+                      padding: 0;
+                      box-sizing: border-box;
+                  }
+                  
+                  html {
+                      font-size: 18px;
+                      line-height: 1.7;
+                  }
+                  
+                  body {
+                      font-family: var(--font-serif);
+                      background: var(--bg);
+                      color: var(--fg);
+                      max-width: 720px;
+                      margin: 0 auto;
+                      padding: 2rem;
+                  }
+                  
+                  /* Header */
+                  header {
+                      border-bottom: 1px solid var(--muted);
+                      padding-bottom: 1rem;
+                      margin-bottom: 2rem;
+                  }
+                  
+                  nav {
+                      display: flex;
+                      flex-wrap: wrap;
+                      gap: 1rem;
+                      align-items: baseline;
+                  }
+                  
+                  .site-title {
+                      font-family: var(--font-mono);
+                      font-size: 1.5rem;
+                      font-weight: bold;
+                      color: var(--accent);
+                      text-decoration: none;
+                  }
+                  
+                  .tagline {
+                      color: var(--muted);
+                      font-style: italic;
+                      flex-grow: 1;
+                  }
+                  
+                  nav a {
+                      color: var(--link);
+                      text-decoration: none;
+                  }
+                  
+                  nav a:hover {
+                      text-decoration: underline;
+                  }
+                  
+                  /* Main content */
+                  main {
+                      min-height: 60vh;
+                  }
+                  
+                  h1, h2, h3 {
+                      font-family: var(--font-mono);
+                      margin: 2rem 0 1rem;
+                      line-height: 1.3;
+                  }
+                  
+                  h1 { font-size: 1.8rem; color: var(--accent); }
+                  h2 { font-size: 1.4rem; }
+                  h3 { font-size: 1.2rem; }
+                  
+                  p {
+                      margin-bottom: 1rem;
+                  }
+                  
+                  blockquote {
+                      border-left: 3px solid var(--accent);
+                      padding-left: 1rem;
+                      margin: 1.5rem 0;
+                      color: var(--muted);
+                      font-style: italic;
+                  }
+                  
+                  code {
+                      font-family: var(--font-mono);
+                      background: #1a1a1a;
+                      padding: 0.2rem 0.4rem;
+                      font-size: 0.9rem;
+                  }
+                  
+                  pre {
+                      background: #1a1a1a;
+                      padding: 1rem;
+                      overflow-x: auto;
+                      margin: 1rem 0;
+                  }
+                  
+                  pre code {
+                      padding: 0;
+                      background: none;
+                  }
+                  
+                  a {
+                      color: var(--link);
+                  }
+                  
+                  /* Post list */
+                  .post-list {
+                      list-style: none;
+                  }
+                  
+                  .post-list li {
+                      margin-bottom: 0.5rem;
+                      display: flex;
+                      gap: 1rem;
+                      align-items: baseline;
+                  }
+                  
+                  .post-list time {
+                      font-family: var(--font-mono);
+                      color: var(--muted);
+                      font-size: 0.85rem;
+                      flex-shrink: 0;
+                  }
+                  
+                  .subtitle {
+                      color: var(--muted);
+                  }
+                  
+                  /* Article */
+                  article {
+                      margin-bottom: 4rem;
+                  }
+                  
+                  .post-header {
+                      margin-bottom: 2rem;
+                      border-bottom: 1px solid var(--muted);
+                      padding-bottom: 1rem;
+                  }
+                  
+                  .post-header time {
+                      font-family: var(--font-mono);
+                      color: var(--muted);
+                      font-size: 0.85rem;
+                  }
+                  
+                  .post-footer {
+                      margin-top: 2rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--muted);
+                      color: var(--muted);
+                      font-size: 0.9rem;
+                  }
+                  
+                  .tag {
+                      background: #1a1a1a;
+                      padding: 0.2rem 0.5rem;
+                      margin-right: 0.5rem;
+                      font-family: var(--font-mono);
+                      font-size: 0.8rem;
+                  }
+                  
+                  /* Footer */
+                  footer {
+                      margin-top: 4rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--muted);
+                      color: var(--muted);
+                      font-size: 0.85rem;
+                      text-align: center;
+                  }
+                  
+                  /* Intro section */
+                  .intro {
+                      margin-bottom: 3rem;
+                  }
+                  
+                  .intro blockquote {
+                      font-size: 1.1rem;
+                      margin: 1.5rem 0;
+                  }
+                  
+                  /* Responsive */
+                  @media (max-width: 600px) {
+                      html { font-size: 16px; }
+                      body { padding: 1rem; }
+                      .tagline { display: none; }
+                  }
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # PHASE 3: CONTENT SYSTEM
+    # ─────────────────────────────────────────────────────────────────────────
+
+    content_creator:
+        role: "Create initial content and about page"
+        model: "claude-sonnet-4-20250514"
+        workflow: krzy-site
+        phase: content_system
+        depends_on: [style_designer]
+
+        tasks:
+            - name: "create_about_page"
+              description: "About page explaining the site's purpose"
+              file: "content/about/_index.md"
+              content: |
+                  ---
+                  title: "About krzy.ai"
+                  ---
+                  
+                  ## The Luddite Question
+                  
+                  In 1811, textile workers in Nottinghamshire began smashing the stocking frames that were eliminating their livelihoods. History has turned "Luddite" into an insult—a synonym for technophobe.
+                  
+                  This is a lie.
+                  
+                  The Luddites weren't opposed to technology. They were opposed to the *deployment* of technology in ways that enriched factory owners while immiserating workers. They asked a question Silicon Valley has worked hard to suppress:
+                  
+                  **Who benefits from this machine?**
+                  
+                  ## The Critic's Mirror
+                  
+                  This site exists as the shadow of [Univrs.io](https://univrs.io)—every technical milestone questioned, every claim examined, every assumption challenged.
+                  
+                  The builder and the critic are the same person. The split is for clarity.
+                  
+                  If I stop being able to write these critiques, I've become the Winged Lion—projecting peace while building tyranny.
+                  
+                  ## Influences
+                  
+                  - **Brian Merchant** — *Blood in the Machine*: The true history of the Luddites
+                  - **Karen Hao** — *Empire of AI*: Critical tech journalism, following power
+                  - **The original Luddites** — The question that won't die
+                  
+                  ## Contact
+                  
+                  - GitHub: [@sepahsalar](https://github.com/ardeshir)
+                  - Mastodon: [@sepahsalar@hachyderm.io](https://hachyderm.io/@sepahsalar)
+                  
+                  The critic welcomes critique.
+
+            - name: "create_first_post"
+              description: "Initial critique post"
+              file: "content/posts/the-platform-engineers-wager.md"
+              content: |
+                  ---
+                  title: "The Platform Engineer's Wager"
+                  subtitle: "Univrs.io and the Machinery of Hope"
+                  date: 2024-12-31
+                  tags: ["univrs", "critique", "precedents"]
+                  ---
+                  
+                  ## I. The Frame Breakers and the Frame Builders
+                  
+                  In 1811, textile workers in Nottinghamshire began smashing the stocking frames that were eliminating their livelihoods. They called themselves Luddites.
+                  
+                  Two hundred years later, a platform engineer sits in Minneapolis, employed by Cargill—one of the world's largest commodity traders—while building, on evenings and weekends, what he calls "freedom infrastructure."
+                  
+                  He is not smashing frames. He is building them.
+                  
+                  The question is: for whom?
+                  
+                  [Continue reading the full analysis...]
+                  
+                  ---
+                  
+                  *This is the first entry in an ongoing critique of my own work. Every Univrs.io release will generate a corresponding analysis here.*
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # PHASE 4: CRITIQUE ENGINE
+    # ─────────────────────────────────────────────────────────────────────────
+
+    critique_engine:
+        role: "Automated critique generation for Univrs.io updates"
+        model: "claude-sonnet-4-20250514"
+        workflow: critique-cycle
+        phase: write_critique
+
+        context:
+            - "Style: Third-person journalistic, in the manner of Karen Hao"
+            - "Framework: Luddite question (who benefits?)"
+            - "Structure: Facts first, then analysis, then precedent comparison"
+            - "Tone: Sharp but fair, transgressive but motivated by honest assessment"
+            - "Always include: test counts, user counts, gap analysis"
+
+        tasks:
+            - name: "generate_critique_template"
+              description: "Template for automated critique generation"
+              file: "templates/critique-template.md"
+              content: |
+                  ---
+                  title: "{{ .Title }}"
+                  subtitle: "Critique of {{ .Release }}"
+                  date: {{ .Date }}
+                  tags: ["univrs", "critique", "{{ .Component }}"]
+                  release_version: "{{ .Version }}"
+                  ---
+                  
+                  ## The Facts
+                  
+                  As of {{ .Date }}, Univrs.io reports:
+                  
+                  {{ range .TestCounts }}
+                  - **{{ .Component }}**: {{ .Count }} tests
+                  {{ end }}
+                  
+                  **Total tests**: {{ .TotalTests }}
+                  **Known users**: {{ .UserCount }}
+                  **Ratio of tests to users**: {{ .Ratio }}
+                  
+                  ## What This Release Claims
+                  
+                  {{ .ClaimedFeatures }}
+                  
+                  ## What This Release Actually Delivers
+                  
+                  {{ .ActualDeliverables }}
+                  
+                  ## The Gap
+                  
+                  {{ .GapAnalysis }}
+                  
+                  ## Historical Precedent
+                  
+                  {{ .PrecedentComparison }}
+                  
+                  ## The Luddite Question
+                  
+                  Who benefits if this works?
+                  
+                  {{ .BeneficiaryAnalysis }}
+                  
+                  ---
+                  
+                  *Generated critique for {{ .Release }}. The builder and the critic are the same person.*
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # PHASE 5: DEPLOYMENT
+    # ─────────────────────────────────────────────────────────────────────────
+
+    deployer:
+    role: "Deploy site to GitHub Pages"
+        model: "claude-sonnet-4-20250514"
+        workflow: krzy-site
+        phase: deployment
+        depends_on: [content_creator]
+
+        tasks:
+            - name: "create_github_action"
+              description: "GitHub Actions workflow for Hugo deployment"
+              file: ".github/workflows/deploy.yml"
+              content: |
+                  name: Deploy Hugo site to Pages
+                  
+                  on:
+                    push:
+                      branches: ["main"]
+                    workflow_dispatch:
+                  
+                  permissions:
+                    contents: read
+                    pages: write
+                    id-token: write
+                  
+                  concurrency:
+                    group: "pages"
+                    cancel-in-progress: false
+                  
+                  defaults:
+                    run:
+                      shell: bash
+                  
+                  jobs:
+                    build:
+                      runs-on: ubuntu-latest
+                      env:
+                        HUGO_VERSION: 0.121.0
+                      steps:
+                        - name: Install Hugo CLI
+                          run: |
+                            wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+                            && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+                        - name: Checkout
+                          uses: actions/checkout@v4
+                          with:
+                            submodules: recursive
+                        - name: Setup Pages
+                          id: pages
+                          uses: actions/configure-pages@v4
+                        - name: Build with Hugo
+                          env:
+                            HUGO_ENVIRONMENT: production
+                            HUGO_ENV: production
+                          run: |
+                            hugo \
+                              --minify \
+                              --baseURL "${{ steps.pages.outputs.base_url }}/"
+                        - name: Upload artifact
+                          uses: actions/upload-pages-artifact@v2
+                          with:
+                            path: ./public
+                  
+                    deploy:
+                      environment:
+                        name: github-pages
+                        url: ${{ steps.deployment.outputs.page_url }}
+                      runs-on: ubuntu-latest
+                      needs: build
+                      steps:
+                        - name: Deploy to GitHub Pages
+                          id: deployment
+                          uses: actions/deploy-pages@v3
+
+            - name: "create_gitignore"
+              description: "Git ignore file"
+              file: ".gitignore"
+              content: |
+                  public/
+                  resources/
+                  .hugo_build.lock
+                  .DS_Store
+
+            - name: "build_and_commit"
+              description: "Build site and commit"
+              commands:
+                  - "cd ~/repos/krzy && git add -A"
+                  - "cd ~/repos/krzy && git commit -m 'Initialize krzy.ai site structure' || true"
+                  - "cd ~/repos/krzy && git push origin main || true"
+
+# ════════════════════════════════════════════â════════════════════
+# COORDINATION
+# ═══════════════════════════════════════════════════════════════════════════
+
+coordination:
+    strategy: "sequential"
+
+    sync_points:
+        - name: "structure_complete"
+          after: "site_architect"
+          gate: "Hugo config and layouts created"
+
+        - name: "style_complete"
+          after: "style_designer"
+          gate: "CSS stylesheet created"
+
+        - name: "content_ready"
+          after: "content_creator"
+          gate: "About page and first post created"
+
+        - name: "deployed"
+          after: "deployer"
+          gate: "Site pushed to GitHub"
+
+# ═════════════════════════════════════════════════════════════════════âESS CRITERIA
+# ═══════════════════════════════════════════════════════════════════════════
+
+success_criteria:
+    - "Hugo site structure created"
+    - "Minimal dark theme CSS complete"
+    - "About page explains Luddite framework"
+    - "First critique post published"
+    - "GitHub Actions deployment configured"
+    - "Site accessible at krzy.ai (after DNS)══════════════════════════════════════════════════════════════════════════
+# DELIVERABLES
+# ═══════════════════════════════════════════════════════════════════════════
+
+deliverables:
+    new_files:
+        - "confi      - "layouts/_default/baseof.html"
+        - "layouts/_default/single.html"
+        - "layouts/_default/list.html"
+        - "layouts/index.html"
+        - "static/css/style.css"
+        - "content/about/_index.md"
+        - "content/posts/the-platform-engineers-wager.md"
+        - "templates/critique-template.md"
+        - ".github/workflows/deploy.yml"
+        - ".gitignore"
+
+    site_features:
+        - "Minimal dark theme"
+        - "Text-focused design"
+        - "No JavaScript for reading"
+        - "Mobile responsive"
+        - "Automated deployment via GitHub Actions"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# HOOKS: AUTO-CRITIQUE ON UNIVRS.IO UPDATES
+# ═════════════════════════════════════════════════════════════════════════
+
+hooks:
+    on_univrs_release:
+        description: "Triggered when Univrs.io has a new release"
+        workflow: "critique-cycle"
+        inputs:
+            - "release_notes"
+            - "test_counts"
+            - "claimed_features"
+        outputs:
+            - "content/posts/critique-{version}.md"
+
+    post_critique:
+        description: "After critique is generated"
+        commands:
+            - "cd ~/repos/krzy && hugo"
+            - "cdos/krzy && git add content/posts/"
+            - "cd ~/repos/krzy && git commit -m 'Critique: {version}'"
+            - "cd ~/repos/krzy && git push origin main"

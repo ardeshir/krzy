@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="intro">
+    <h1>The Critic's Mirror</h1>
+    <blockquote>
+        "If I stop being able to critique myself, that's when I've become the Winged Lion."
+    </blockquote>
+    <p>This site exists to ask the Luddite question of every technology I build:</p>
+    <p><strong>Who benefits from this machine?</strong></p>
+</section>
+
+<section class="recent">
+    <h2>Recent Critiques</h2>
+    <ul class="post-list">
+        {{ range first 10 .Site.RegularPages }}
+        <li>
+            <time>{{ .Date.Format "2006-01-02" }}</time>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
