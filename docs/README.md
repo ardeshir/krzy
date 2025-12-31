@@ -1,8 +1,6 @@
----
+## "The Platform Engineer's Cathedral: Univrs.io and the Architecture of Displacement"
 
-# Draft: "The Platform Engineer's Cathedral: Univrs.io and the Architecture of Displacement"
-
-**For krzy.ai**
+**by krzy.ai**
 
 ---
 
@@ -138,7 +136,4 @@ Sepahsalar's manifesto ends with a commitment: "If I stop being able to critique
 This is wise. But the harder test is not whether he can critique himself in documents. It's whether he can build something, hand it to strangers, and let them break it, reshape it, make it theirs.
 
 The refugee builds to ensure nothing can be taken away again. Sometimes that means building something so tightly held it can never be given.
-
----
-
 
