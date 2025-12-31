@@ -37,7 +37,7 @@ export default function Post() {
         <footer className="mt-8 pt-4 border-t border-muted">
           <p className="text-muted text-sm">
             Tags:{' '}
-            {post.tags.map((tag, i) => (
+            {post.tags.map((tag) => (
               <span key={tag} className="bg-[#1a1a1a] px-2 py-1 font-mono text-xs mr-2">
                 {tag}
               </span>
