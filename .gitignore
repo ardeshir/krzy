@@ -1,4 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
 public/
+
+# Hugo (legacy)
 resources/
 .hugo_build.lock
+
+# OS
 .DS_Store
+
+# Editor
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env files
+.env
+.env.local
+.env.*.local
