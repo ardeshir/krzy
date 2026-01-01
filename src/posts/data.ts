@@ -8,6 +8,13 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'the-hyphal-hierarchy',
+    title: 'The Hyphal Hierarchy',
+    subtitle: 'On Mycelium, Agents, and Who Becomes the Hub',
+    date: '2025-12-31',
+    tags: ['dol', 'enr', 'critique', 'power', 'network'],
+  },
+  {
     slug: 'the-platform-engineers-wager',
     title: "The Platform Engineer's Wager",
     subtitle: 'Univrs.io and the Machinery of Hope',
@@ -17,6 +24,71 @@ export const posts: Post[] = [
 ]
 
 const postContents: Record<string, string> = {
+  'the-hyphal-hierarchy': `
+<h2>I. The Mycelial Metaphor</h2>
+<p>The latest commits to DOL add over 4,000 lines of "hyphal network" code. The metaphor is seductive: a decentralized network modeled on fungal mycelium, where agents grow organically, discover resources, and coordinate without central control.</p>
+<p>Mycelium is nature's internet. It connects trees, distributes nutrients, responds to damage. It has no CEO.</p>
+<p>But the code tells a different story.</p>
+
+<h2>II. The Four Roles</h2>
+<p>In <code>hyphal_coordinator.rs</code>, agents are assigned one of four roles:</p>
+<ul>
+  <li><strong>Hub</strong> (priority 3) — High-connectivity fusion points</li>
+  <li><strong>Explorer</strong> (priority 2) — Active tips, discovering new territory</li>
+  <li><strong>Transport</strong> (priority 1) — Segment nodes, routing messages</li>
+  <li><strong>Dormant</strong> (priority 0) — Inactive, awaiting resources</li>
+</ul>
+<p>The numbers are explicit. Hubs have priority 3. Dormant nodes have priority 0. This is not mycelium. This is hierarchy.</p>
+
+<h2>III. Who Becomes the Hub?</h2>
+<p>The critical question: what determines whether an agent becomes a Hub or stays Dormant?</p>
+<blockquote>
+  <p><em>"High-connectivity fusion point, coordinating multiple paths."</em></p>
+</blockquote>
+<p>Connectivity requires resources. Resources require capital—computational, economic, or social. Those who arrive first, with more resources, become Hubs. Those who arrive later, with less, become Dormant.</p>
+<p>This is not a critique of the engineering. The code is elegant. The architecture is sound. But the metaphor obscures the power structure it encodes.</p>
+
+<h2>IV. The ENR Bridge</h2>
+<p>Meanwhile, in <code>univrs-enr</code>, a new bridge connects economic primitives to gossipsub:</p>
+<ul>
+  <li><strong>Gradient broadcasts</strong> — Resource availability signals</li>
+  <li><strong>Nexus elections</strong> — Hub selection via consensus</li>
+  <li><strong>Credit transfers</strong> — Economic value movement</li>
+  <li><strong>Septal gates</strong> — Circuit breakers for network health</li>
+</ul>
+<p>Credit transfers over P2P gossipsub. The question: who validates? The answer: nodes with reputation. Who has reputation? Those who arrived early, participated more, accumulated trust.</p>
+
+<h2>V. The Precedent: Early Internet</h2>
+<p>The early internet was also "decentralized." Anyone could run a server. The protocol was open.</p>
+<p>Then came the bandwidth costs. The scaling challenges. The DDoS attacks. The legal liabilities.</p>
+<p>Those who could afford the infrastructure became the Hubs. AWS, Cloudflare, Akamai. The rest became clients—consumers of services provided by the few.</p>
+<p>Will the hyphal network follow the same arc?</p>
+
+<h2>VI. The IPFS Question</h2>
+<p>CryptoSaint now stores data on IPFS. This is genuinely decentralized storage. Anyone can pin. Anyone can retrieve.</p>
+<p>But pinning costs resources. Who pins the data that matters? Who ensures persistence? In practice, IPFS networks converge on gateway providers—Infura, Pinata, Cloudflare IPFS.</p>
+<p>Decentralization that requires resources centralizes around those who have resources.</p>
+
+<h2>VII. The Builder's Response</h2>
+<p>The platform engineer might respond:</p>
+<blockquote>
+  <p>"The roles are dynamic. Dormant nodes can become Explorers. Explorers can become Hubs. The hierarchy is emergent, not imposed."</p>
+</blockquote>
+<p>This is true. The code allows for mobility. But mobility in a resource-constrained system favors those with resources. Dynamic hierarchies are still hierarchies.</p>
+<p>The question is not whether the code allows equality. The question is whether the economics enforce inequality.</p>
+
+<h2>VIII. The Path Forward</h2>
+<p>The hyphal metaphor is beautiful. The engineering is impressive. But if this system is to serve the revolution rather than recreate the old patterns:</p>
+<ol>
+  <li><strong>Make the hierarchy visible.</strong> Don't hide power behind organic metaphors. Show users their role, their priority, their path to change it.</li>
+  <li><strong>Subsidize dormancy.</strong> If Dormant nodes are necessary for network health, compensate them. Don't just wait for them to acquire resources.</li>
+  <li><strong>Rotate the Hubs.</strong> Build mechanisms that prevent permanent Hub status. Power should flow, not accumulate.</li>
+  <li><strong>Measure the Gini coefficient.</strong> Track the distribution of connectivity, resources, and influence. Publish it. Respond to it.</li>
+</ol>
+
+<hr />
+<p><em>This critique is generated from commits 6d4e124 (DOL hyphal network), e92a303 (ENR bridge), and 003b2d8 (IPFS storage). The dialogue continues.</em></p>
+`,
   'the-platform-engineers-wager': `
 <h2>I. The Frame Breakers and the Frame Builders</h2>
 <p>In 1811, textile workers in Nottinghamshire began smashing the stocking frames that were eliminating their livelihoods. They called themselves Luddites.</p>
