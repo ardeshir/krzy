@@ -21,6 +21,62 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+/* Article content styling */
+article h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f59e0b;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+article h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+article h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--fg);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+article p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+article ul, article ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+article li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+article ul li {
+  list-style-type: disc;
+}
+
+article ol li {
+  list-style-type: decimal;
+}
+
+article hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 2.5rem 0;
+}
+
 code, pre {
   font-family: 'JetBrains Mono', monospace;
 }
