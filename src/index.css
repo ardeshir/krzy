@@ -6,19 +6,23 @@
   --bg: #0a0a0a;
   --fg: #e0e0e0;
   --accent: #d97706;
-  --muted: #666;
+  --muted: #c3cfe1;
   --link: #33ff33;
 }
 
 body {
-  font-family: 'IBM Plex Serif', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'IBM Plex Mono', 'Fira Code', monospace;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
 }
 
 a {
