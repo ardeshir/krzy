@@ -234,7 +234,7 @@ Defined in `tailwind.config.js` and `src/index.css`:
 | `bg` | `#0a0a0a` | Page background (near black) |
 | `fg` | `#e0e0e0` | Main text color (light gray) |
 | `accent` | `#d97706` | Headings, site title (amber orange) |
-| `muted` | `#666666` | Secondary text, dates |
+| `muted` | `#c3cfe1` | Secondary text, dates (light blue-gray) |
 | `link` | `#33ff33` | Links (terminal green) |
 
 ### Changing Colors
@@ -247,7 +247,7 @@ colors: {
   bg: '#0a0a0a',
   fg: '#e0e0e0',
   accent: '#d97706',    // Change accent here
-  muted: '#666666',
+  muted: '#c3cfe1',     // Light blue-gray for readability
   link: '#33ff33',      // Change link color here
 },
 ```
@@ -258,16 +258,22 @@ colors: {
   --bg: #0a0a0a;
   --fg: #e0e0e0;
   --accent: #d97706;    /* Change accent here */
-  --muted: #666;
+  --muted: #c3cfe1;     /* Light blue-gray for readability */
   --link: #33ff33;      /* Change link color here */
 }
 ```
 
 ### Fonts
 
-The site uses IBM Plex fonts (loaded from Google Fonts in `index.html`):
-- **IBM Plex Mono** - Headings, code, navigation
-- **IBM Plex Serif** - Body text
+The site uses fonts matching vudo.univrs.io (loaded from Google Fonts in `index.html`):
+- **Inter** - Body text (weights 300-600)
+- **Space Grotesk** - Headings, display text (weights 300-500)
+- **JetBrains Mono** - Code blocks, monospace (weights 400-500)
+
+Tailwind classes:
+- `font-sans` → Inter
+- `font-display` → Space Grotesk
+- `font-mono` → JetBrains Mono
 
 ---
 
@@ -430,4 +436,4 @@ When updating krzy.ai programmatically:
 
 ---
 
-*Last updated: December 2024*
+*Last updated: December 2025*

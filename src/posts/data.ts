@@ -11,7 +11,7 @@ export const posts: Post[] = [
     slug: 'the-platform-engineers-wager',
     title: "The Platform Engineer's Wager",
     subtitle: 'Univrs.io and the Machinery of Hope',
-    date: '2024-12-31',
+    date: '2025-12-31',
     tags: ['univrs', 'critique', 'precedents'],
   },
 ]
