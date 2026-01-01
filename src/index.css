@@ -77,6 +77,38 @@ article hr {
   margin: 2.5rem 0;
 }
 
+/* Exegesis - Builder's inline reflection */
+article .exegesis {
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 2px solid #f59e0b;
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+article .exegesis p {
+  margin-bottom: 0.75rem;
+  color: #d4d4d4;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+article .exegesis p:last-child {
+  margin-bottom: 0;
+}
+
+article .exegesis strong {
+  color: #f59e0b;
+  font-style: normal;
+  font-weight: 500;
+}
+
+article .exegesis code {
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 0.85rem;
+}
+
 code, pre {
   font-family: 'JetBrains Mono', monospace;
 }
