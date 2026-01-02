@@ -220,7 +220,7 @@ const postContents: Record<string, string> = {
 <p><strong>Red flag:</strong> The <code>protocol_share</code> is set by <code>OptimalFeeDesigner</code> which optimizes for "protocol goals." Whose goals?</p>
 <p><strong>Who really benefits?</strong></p>
 <ul>
-  <li>Those who can run satellite oracles (capital-intensive)</li>
+  <li>Those who can run satellite gias (capital-intensive)</li>
   <li>Those who can stake in BFT consensus (wealth-weighted)</li>
   <li>Those who understand ZK-SNARK circuits (technical elite)</li>
   <li>Those aligned with BRICS geopolitical objectives</li>
@@ -265,7 +265,7 @@ const postContents: Record<string, string> = {
 <p><strong>The gap:</strong> This is a technical specification, not a running system. The Rust code compiles to nothing yet. The gap between architecture and implementation is the entire system.</p>
 <blockquote>
   <p><em>Promise: "Regenerative economics"</em></p>
-  <p><em>Reality: Valuation models set by oracle operators</em></p>
+  <p><em>Reality: Valuation models set by gia operators</em></p>
 </blockquote>
 <blockquote>
   <p><em>Promise: "Private credit verification"</em></p>
@@ -371,7 +371,7 @@ const postContents: Record<string, string> = {
 
 <div class="exegesis">
   <p><strong>Builder's reflection:</strong> "Zero lines specifying who decides." This is the truest sentence in the critique. I wrote types, not governance. 
-  The Rust compiles; the politics don't. The next commit to CryptoSaint needs to be <code>governance.rs</code>—not another "oracle", not another bridge, 
+  The Rust compiles; the politics don't. The next commit to CryptoSaint needs to be <code>governance.rs</code>—not another gia, not another bridge, 
   but the hard work of specifying: Who proposes changes? Who votes? What's the quorum? What can't be changed? The code is ambitious because ambition is easier than accountability. The dialogue continues—and it must, because the monologue was insufficient.</p>
 </div>
 
