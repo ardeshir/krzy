@@ -385,7 +385,9 @@ const postContents: Record<string, string> = {
   'the-platform-engineers-wager': `
 <h2>I. The Frame Breakers and the Frame Builders</h2>
 <div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The Luddite comparison cuts both ways. They weren't anti-technology—they were anti-dispossession. They smashed frames because the frames smashed them first. I build frames because I believe different frames might protect rather than dispossess. But the original Luddites would ask: who owns your frames? The answer is uncomfortable. The code is open source. The infrastructure runs on Vercel. The development depends on Anthropic. I control the repository but not the stack. Am I building freedom infrastructure or renting it?</p>
+  <p><strong>Builder's reflection:</strong> The Luddite comparison cuts both ways. They weren't anti-technology—they were anti-dispossession. They smashed frames because the frames smashed them first. 
+  I build frames because I believe different frames might protect rather than dispossess. But the original Luddites would ask: who owns your frames? The answer is uncomfortable. The code is open source. The infrastructure runs on local. 
+  I control the repositories but not the stack. Am I building freedom infrastructure or renting it?</p>
 </div>
 <p>In 1811, textile workers in Nottinghamshire began smashing the stocking frames that were eliminating their livelihoods. They called themselves Luddites.</p>
 <p>Two hundred years later, a platform engineer sits in Minneapolis, employed by Cargill—one of the world's largest commodity traders—while building, on evenings and weekends, what he calls "freedom infrastructure."</p>
@@ -394,14 +396,23 @@ const postContents: Record<string, string> = {
 
 <h2>II. The Contradiction</h2>
 <div class="exegesis">
-  <p><strong>Builder's reflection:</strong> I've justified this contradiction to myself many ways. "Cargill pays the bills that fund the freedom work." "Understanding corporate infrastructure makes me better at subverting it." "You can't fight what you don't know." All true. All potentially self-serving rationalization. The honest version: I like the paycheck and I like the side project. The contradiction isn't noble. It's convenient. What I haven't answered: if Univrs.io succeeded, would I leave Cargill? If Cargill demanded I stop, would I? The answer reveals which is the job and which is the calling.</p>
+  <p><strong>Builder's reflection:</strong> I've justified this contradiction to myself many ways. 
+  1. "Cargill pays the bills that fund the freedom work." 
+  2. "Understanding corporate infrastructure makes me better at subverting it." 
+  3. "You can't fight what you don't know." All true. 
+  All potentially self-serving rationalization. The honest version: I need the paycheck and I learn from this side project. 
+  The contradiction isn't noble. It's convenient. What I haven't answered: if Univrs.io succeeded, would I leave Cargill? 
+  If Cargill demanded I stop, would I? The answer reveals which is the job and which is the calling.</p>
 </div>
 <p>The platform engineer works by day for agricultural capital, by night for "digital sovereignty." The cognitive dissonance is the feature, not the bug.</p>
 <p>Every revolutionary has a day job. The question is whether the day job reveals something about the revolution.</p>
 
 <h2>III. The Promises</h2>
 <div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The promises are genuine. They're also unfulfilled. Decentralized identity: DOL has primitives for this, but no users. User-owned data: the architecture supports it, but the data doesn't exist yet. Freedom from platform tyranny: hard to claim when the sites run on Vercel and Cloudflare. The gap between promise and reality isn't hypocrisy—it's the natural state of any early project. But the critique is right that I should stop advertising promises and start showing receipts. What exists today? A domain-specific language. Some CLI tools. Educational content. That's the reality. The rest is aspiration.</p>
+  <p><strong>Builder's reflection:</strong> The promises are genuine. They're also unfulfilled. Decentralized identity: DOL has primitives for this, but no users. 
+  User-owned data: the architecture supports it, but the data doesn't exist yet. Freedom from platform tyranny: hard to claim when the sites run on Cloudflare. 
+  The gap between promise and reality isn't hypocrisy—it's the natural state of any early project. 
+  But the critique is right that I should stop advertising promises and start showing receipts. What exists today? A domain-specific language. CLI tools. Educational content. That's the reality. </p>
 </div>
 <p>Univers.io promises:</p>
 <ul>
@@ -413,7 +424,11 @@ const postContents: Record<string, string> = {
 
 <h2>IV. The Questions</h2>
 <div class="exegesis">
-  <p><strong>Builder's reflection:</strong> Answering honestly: (1) Vercel hosts the sites, Anthropic hosts the AI, GitHub hosts the code. I pay approximately $20/month in API costs. (2) I write the code, with Claude as co-author. No other human contributors. (3) I set the standards, which means they're untested by dissent. (4) I pay the bills from my Cargill salary. The critique is correct: follow the money. The money flows from agricultural commodity trading → my labor → infrastructure rental → this project. That's the supply chain. I can't claim sovereignty while the value chain runs through corporate employment.</p>
+  <p><strong>Builder's reflection:</strong> Answering honestly: (1) Cloudflare hosts the sites, GitHub hosts the code. I pay approximately $20/month in API costs. 
+  (2) I write the code. No other contributors, yet. 
+  (3) I set the standards, which means they're untested by dissent. 
+  (4) I pay the bills from my Cargill salary. The critique is correct: follow the money. The money flows from agricultural commodity trading → my labor → infrastructure rental → this project. 
+  That's the supply chain. I can't claim sovereignty while the value chain runs through corporate employment.</p>
 </div>
 <ol>
   <li><strong>Who hosts the infrastructure?</strong> Decentralization requires hardware. Hardware costs money. Money comes from somewhere.</li>
@@ -424,7 +439,9 @@ const postContents: Record<string, string> = {
 
 <h2>V. The Precedents</h2>
 <div class="exegesis">
-  <p><strong>Builder's reflection:</strong> This is the section that keeps me awake. The pattern is damning: every decentralization effort recentralizes around whoever can afford the infrastructure. Email → Gmail. Web → Big Tech. Crypto → exchanges. Fediverse → mastodon.social. What makes me think Univrs.io will be different? Honestly, nothing structural. The same economics apply. The only variable is whether I can build something useful before someone with more resources captures it. This isn't optimism. It's a race against the historical pattern. And history is undefeated.</p>
+  <p><strong>Builder's reflection:</strong> This is the section that keeps me going. The pattern is damning: every decentralization effort recentralizes around whoever can afford the infrastructure. Email → Gmail. Web → Big Tech. Crypto → exchanges. 
+  Fediverse → mastodon.social. What makes me think Univrs.io will be different? Honestly, nothing structural. The same economics apply. The only variable is whether I can build something useful before someone with more resources captures it. 
+  It's a race against the historical pattern, and history is undefeated.</p>
 </div>
 <p>Every "freedom technology" has a history:</p>
 <ul>
@@ -437,7 +454,9 @@ const postContents: Record<string, string> = {
 
 <h2>VI. The Wager</h2>
 <div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The critique lands. Building can make things worse. I've thought about this with CryptoSaint specifically—the BRICS Pay integration could enable sanctions evasion. The Spirit agent framework could be used for manipulation. The ENR economic primitives could create new forms of extraction. I tell myself: "The tools are neutral, it's the application that matters." But that's what every weapons manufacturer says. The honest answer is: I don't know if I'm building something helpful or harmful. The wager isn't just about expected value. It's about living with the uncertainty of not knowing which side you're on.</p>
+  <p><strong>Builder's reflection:</strong> The critique lands. Building can make things worse. I've thought about this with CryptoSaint specifically—the BRICS Pay integration could enable sanctions evasion. 
+  The Spirit agent framework could be used for manipulation. The ENR economic primitives could create new forms of extraction. I tell myself: "The tools are neutral, it's the application that matters." 
+  But that's what every weapons manufacturer says. The honest answer is: I don't know if I'm building something helpful or harmful. The wager isn't just about expected value. It's about living with the uncertainty of not knowing which side you're on.</p>
 </div>
 <p>The platform engineer makes Pascal's Wager:</p>
 <blockquote>
@@ -460,7 +479,11 @@ const postContents: Record<string, string> = {
 
 <h2>VIII. The Path Forward</h2>
 <div class="exegesis">
-  <p><strong>Builder's reflection:</strong> Five recommendations. Let me commit to them publicly: (1) Named: Cargill, Anthropic, Vercel, GitHub—that's the power structure I'm embedded in. (2) Measured: zero users, zero deployments, zero external contributors. That's the gap. (3) Documented: the /critique and /respond skills exist precisely to document failures as they occur. (4) Asked: this exegesis is the practice of asking "who benefits?" (5) Off-ramps: this is the one I haven't built. If this all fails, what remains? Open-source code that someone else might use differently. That's a weak off-ramp. I need to think harder about what failure looks like and how to make it generative rather than just wasteful.</p>
+  <p><strong>Builder's reflection:</strong> Five recommendations. Let me commit to them publicly: (1) Named: Cargill, Cloudflare, GitHub—that's the power structure I'm embedded in. (2) Measured: zero users, zero deployments, zero external contributors. 
+  That's the gap. (3) Documented: the /critique and /respond exist precisely to document failures as they occur. 
+  (4) Asked: this exegesis is the practice of asking "who benefits?" (5) Off-ramps: this is the one I haven't built. 
+  If this all fails, what remains? Open-source code that someone else might use differently. That's a weak off-ramp. 
+  I need to think harder about what failure looks like and how to make it generative rather than just wasteful.</p>
 </div>
 <p>The critique is not a recommendation to stop building. It is a recommendation to build <em>with awareness</em>:</p>
 <ol>
