@@ -1,0 +1,79 @@
+{
+  "permissions": {
+    "allow": [
+      // Development workflow
+      "Bash(npm install)",
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm run test)",
+      
+      // Git operations - scoped
+      "Bash(git status)",
+      "Bash(git branch)",
+      "Bash(git checkout -b feature/*)",
+      "Bash(git add src/)",
+      "Bash(git add package.json)",
+      "Bash(git add README.md)",
+      "Bash(git commit -F .git/COMMIT_TEMPLATE)",
+      "Bash(git push origin feature/*)",
+      "Bash(git pull origin main)",
+      "Bash(git fetch)",
+      "Bash(git rebase origin/main)",
+      "Bash(git stash)",
+      "Bash(git stash pop)",
+      
+      // Repository inspection - specific repos only
+      "Bash(git -C ~/repos/krzy log --oneline -10)",
+      "Bash(git -C ~/repos/univrs-dol log --oneline -10)",
+      "Bash(git -C ~/repos/univrs-vudo log --oneline -10)",
+      "Bash(git -C ~/repos/univrs-enr log --oneline -10)",
+      "Bash(git -C ~/repos/cryptosaint.io log --oneline -10)",
+      
+      // System inspection - limited
+      "Bash(lsof -i :3000-3999)",
+      "Bash(ss -tlnp | grep :300)",
+      "Bash(ps aux | grep node)",
+      
+      // GitHub CLI - scoped
+      "Bash(gh pr create --template .github/pull_request_template.md)",
+      "Bash(gh pr list --state open)",
+      "Bash(gh run list --limit 5)",
+      "Bash(gh api /user)",
+      
+      // File operations - specific patterns
+      "Bash(cat package.json)",
+      "Bash(cat vite.config.ts)",
+      "Bash(cat tailwind.config.js)",
+      "Bash(cat src/components/*.{tsx,ts})",
+      "Bash(cat docs/*.md)",
+      
+      // Process management - safer
+      "Bash(pkill -f 'vite.*dev')",
+      "Bash(pkill -f 'npm.*run.*dev')",
+      
+      // Custom workflows
+      "Bash(npx claude-flow@alpha swarm \"read .flows/krzy-ai-swarm.yaml --workflow krzy-site\")",
+      "Skill(ecosystem-health)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(chmod 777 *)",
+      "Bash(curl * | bash)",
+      "Bash(git push --force*)",
+      "Bash(git reset --hard HEAD~*)"
+    ]
+  },
+  "templates": {
+    "commit_message_file": ".git/COMMIT_TEMPLATE",
+    "pr_template_file": ".github/pull_request_template.md"
+  },
+  "environment": {
+    "repositories": [
+      "krzy",
+      "univrs-dol", 
+      "univrs-vudo",
+      "univrs-enr",
+      "cryptosaint.io"
+    ]
+  }
+}
