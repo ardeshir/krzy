@@ -92,9 +92,10 @@
   - hooks-automation - Claude Code hooks
   - stream-chain - Streaming pipelines
 
-  krzy.ai-specific (2 skills)
+  krzy.ai-specific (3 skills)
   - critique - Generate Luddite analyses of Univrs.io
   - respond - Add builder exegesis to critiques
+  - evolve - Self-evolving skill feedback loop
 
   ---
   ### Claude-Flow Swarm Automation
@@ -155,8 +156,9 @@
   │   └── post-template.md # HTML post structure
   ├── respond/            # /respond skill
   │   └── SKILL.md        # Exegesis workflow
-  └── meta/               # Reference docs (not a skill)
-      ├── CLAUDE.md       # Claude Code reference
+  └── meta/               # /evolve skill
+      ├── SKILL.md        # Self-evolving feedback loop
+      ├── CLAUDE.md       # Evolution framework reference
       ├── meta.md         # Meta documentation
       └── planetserve-integration.md  # Integration guide
 ```
@@ -165,15 +167,15 @@
 
   Potential New Skills for Univrs.io
 
-  | Skill Idea          | Purpose                     | Triggers                 |
-  |---------------------|-----------------------------|--------------------------|
-  | /dol-compile        | Compile DOL to Rust/TS/WASM | "compile this schema"    |
-  | /spirit-package     | Create Spirit packages      | "package this as Spirit" |
-  | /enr-analyze        | Analyze economic flows      | "review pricing model"   |
-  | /vudo-sandbox       | Run WASM in VUDO            | "execute in sandbox"     |
-  | /cryptosaint-credit | Manage mutual credit        | "check credit balance"   |
-  | /learn-tutorial     | Generate tutorials          | "create tutorial for"    |
-  | /ecosystem-health   | Cross-repo health check     | "ecosystem status"       |
+  | Skill Idea          | Purpose                     | Triggers                 | Status      |
+  |---------------------|-----------------------------|--------------------------|-------------|
+  | /dol-compile        | Compile DOL to Rust/TS/WASM | "compile this schema"    | planned     |
+  | /spirit-package     | Create Spirit packages      | "package this as Spirit" | planned     |
+  | /enr-analyze        | Analyze economic flows      | "review pricing model"   | planned     |
+  | /vudo-sandbox       | Run WASM in VUDO            | "execute in sandbox"     | planned     |
+  | /cryptosaint-credit | Manage mutual credit        | "check credit balance"   | planned     |
+  | /learn-tutorial     | Generate tutorials          | "create tutorial for"    | planned     |
+  | /ecosystem-health   | Cross-repo health check     | "ecosystem status"       | implemented |
 
 ### Skill Creation Workflow
 
