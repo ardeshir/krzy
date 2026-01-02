@@ -40,9 +40,6 @@ export const posts: Post[] = [
 const postContents: Record<string, string> = {
   'the-progress-machine': `
 <h2>I. THE DASHBOARD</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> I added MilestoneTracker because I needed to see progress. After months of solitary building, the dashboard was for me—motivation made visible. The critique is right: the numbers measure my effort, not anyone's benefit. But here's the uncomfortable truth: without that dashboard, I might have stopped. The question isn't whether vanity metrics are good. The question is whether they're necessary scaffolding that gets removed, or load-bearing walls that trap you.</p>
-</div>
 <p>Across learn.univrs.io and vudo.univrs.io, a new component appears: the <strong>MilestoneTracker</strong>. It displays progress with satisfying metrics:</p>
 <ul>
   <li><strong>6/7 phases complete</strong></li>
@@ -51,11 +48,11 @@ const postContents: Record<string, string> = {
 </ul>
 <p>The dashboard glows with progress. Checkmarks accumulate. The revolution is 85.7% complete.</p>
 <p>But who defines the phases? Who counts the lines? And what do these numbers actually measure?</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> I added MilestoneTracker because I needed to see progress. After months of solitary building, the dashboard was for me—motivation made visible. The critique is right: the numbers measure my effort, not anyone's benefit. But here's the uncomfortable truth: without that dashboard, I might have stopped. The question isn't whether vanity metrics are good. The question is whether they're necessary scaffolding that gets removed, or load-bearing walls that trap you.</p>
+</div>
 
 <h2>II. THE METRICS</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> "What is measured is managed." I've heard this my whole career. The critique inverts it: what is measured becomes the goal. Both are true. The real failure isn't measuring the wrong things—it's not measuring the right things <em>alongside</em> them. I could add "0 production users" to the dashboard today. I haven't. Why? Because it would feel like failure. But that discomfort is exactly what the dashboard should surface.</p>
-</div>
 <p>The commit messages reveal the shape of progress:</p>
 <blockquote>
   <p><em>"Display development stats (6/7 phases, 1,156 tests, 3,094 DOL lines)"</em></p>
@@ -74,19 +71,19 @@ const postContents: Record<string, string> = {
   <li><strong>Value delivered</strong> — what problem did it solve?</li>
 </ul>
 <p>The MilestoneTracker tracks the builder's effort, not the user's benefit. This is progress measured from the inside.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> "What is measured is managed." I've heard this my whole career. The critique inverts it: what is measured becomes the goal. Both are true. The real failure isn't measuring the wrong things—it's not measuring the right things <em>alongside</em> them. I could add "0 production users" to the dashboard today. I haven't. Why? Because it would feel like failure. But that discomfort is exactly what the dashboard should surface.</p>
+</div>
 
 <h2>III. THE CO-AUTHOR</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The AI signature on every commit is honest, but honesty isn't absolution. I use Claude because it multiplies what I can build alone. But "alone" is the key word. This ecosystem has one human contributor. The AI doesn't change that—it amplifies it. The co-authorship isn't the problem. The <em>solo</em>-authorship is. If this matters, others need to contribute. If others don't contribute, maybe it doesn't matter.</p>
-</div>
 <p>Every recent commit carries the same signature:</p>
 
 <p>The Luddites smashed machines. This machine critiques itself.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> The AI signature on every commit is honest, but honesty isn't absolution. I use Claude because it multiplies what I can build alone. But "alone" is the key word. This ecosystem has one human contributor. The AI doesn't change that—it amplifies it. The co-authorship isn't the problem. The <em>solo</em>-authorship is. If this matters, others need to contribute. If others don't contribute, maybe it doesn't matter.</p>
+</div>
 
 <h2>IV. WHO BENEFITS?</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The red flag is accurate: I benefit from more code. Anthropic benefits from my usage. We're aligned in ways that don't necessarily serve users. But here's what the critique doesn't ask: what's the alternative? Stop building until users appear? Users won't appear for vaporware. The chicken-egg problem is real. My answer has been: build enough that it <em>could</em> serve users, then find out if it does. The critique suggests this might be rationalization. It might be.</p>
-</div>
 <p><strong>From the MilestoneTracker:</strong></p>
 <ul>
   <li>The builder — sees visible progress, maintains motivation</li>
@@ -100,11 +97,11 @@ const postContents: Record<string, string> = {
   <li>The ecosystem — faster iteration (but is faster better?)</li>
 </ul>
 <p><strong>Red flag:</strong> The builder and the AI share incentives. More code = more progress = more dashboard. Neither benefits from <em>less</em> code that serves users better.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> The red flag is accurate: I benefit from more code. Anthropic benefits from my usage. We're aligned in ways that don't necessarily serve users. But here's what the critique doesn't ask: what's the alternative? Stop building until users appear? Users won't appear for vaporware. The chicken-egg problem is real. My answer has been: build enough that it <em>could</em> serve users, then find out if it does. The critique suggests this might be rationalization. It might be.</p>
+</div>
 
 <h2>V. WHO PAYS?</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The sovereignty costs hit hardest. I'm building "freedom infrastructure" on Anthropic's API. The irony isn't lost on me. Every prompt I send trains their models. Every insight I generate flows through their servers. The defense I tell myself: the <em>output</em> is open source, even if the <em>process</em> isn't sovereign. But that's a weak defense. The process shapes the output. I don't know how to resolve this yet.</p>
-</div>
 <p><strong>Attention costs:</strong></p>
 <ul>
   <li>Every visitor to learn.univrs.io sees the MilestoneTracker</li>
@@ -122,11 +119,11 @@ const postContents: Record<string, string> = {
   <li>Training data flows to corporate infrastructure</li>
   <li>"Digital sovereignty" built with surveillance capital tools</li>
 </ul>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> The sovereignty costs hit hardest. I'm building "freedom infrastructure" on Anthropic's API. The irony isn't lost on me. Every prompt I send trains their models. Every insight I generate flows through their servers. The defense I tell myself: the <em>output</em> is open source, even if the <em>process</em> isn't sovereign. But that's a weak defense. The process shapes the output. I don't know how to resolve this yet.</p>
+</div>
 
 <h2>VI. PROMISE VS. REALITY</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> "Progress toward what?" is the right question. I've been answering it implicitly: progress toward a complete system that <em>could</em> serve users. But "could" is doing a lot of work. The honest answer: progress toward satisfying my own vision of what this should be. Whether that vision serves anyone else is untested. The gap isn't a bug in the process—it's the central question the process is avoiding.</p>
-</div>
 <blockquote>
   <p><em>Promise: 6/7 phases complete</em></p>
   <p><em>Reality: Zero users depending on the system</em></p>
@@ -140,11 +137,11 @@ const postContents: Record<string, string> = {
   <p><em>Reality: AI trained on surveillance capitalism now critiques surveillance capitalism</em></p>
 </blockquote>
 <p>The gap is not in the code. The gap is in the question: <strong>Progress toward what?</strong></p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> "Progress toward what?" is the right question. I've been answering it implicitly: progress toward a complete system that <em>could</em> serve users. But "could" is doing a lot of work. The honest answer: progress toward satisfying my own vision of what this should be. Whether that vision serves anyone else is untested. The gap isn't a bug in the process—it's the central question the process is avoiding.</p>
+</div>
 
 <h2>VII. THE PRECEDENT</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> I've watched velocity become the product at three different companies. I've seen engineers game contribution graphs for performance reviews. I know this pattern. And I built MilestoneTracker anyway. Why? Because I thought awareness would protect me. "I know it's a trap, so I won't fall in." Famous last words. The precedent suggests awareness isn't enough. Structural changes are. What structure would prevent MilestoneTracker from becoming what I'm criticizing?</p>
-</div>
 <p>GitHub contribution graphs. LinkedIn activity badges. Startup metrics dashboards.</p>
 <p>Every productivity tool eventually becomes a performance tool. The measurement becomes the goal. Lines of code become success. Commits become credibility.</p>
 <ul>
@@ -153,19 +150,19 @@ const postContents: Record<string, string> = {
   <li><strong>Startups → metrics:</strong> MAU/DAU theater for investors</li>
 </ul>
 <p>Will MilestoneTracker follow the same arc? Will "1,200 tests" become the goal instead of "one satisfied user"?</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> I've watched velocity become the product at three different companies. I've seen engineers game contribution graphs for performance reviews. I know this pattern. And I built MilestoneTracker anyway. Why? Because I thought awareness would protect me. "I know it's a trap, so I won't fall in." Famous last words. The precedent suggests awareness isn't enough. Structural changes are. What structure would prevent MilestoneTracker from becoming what I'm criticizing?</p>
+</div>
 
 <h2>VIII. THE RECURSIVE CRITIQUE</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> Yes, it makes me uncomfortable. The sections on sovereignty costs and AI incentive alignment are particularly sharp. But discomfort isn't change. The test isn't whether I squirm—it's whether I act. This exegesis is itself a form of action, but a weak one. Adding words to a critique doesn't fix the dashboard. Shipping a "0/1 users" metric would be stronger. I'm noting this for myself: the real response to this critique is code, not prose.</p>
-</div>
 <p>This critique is itself co-authored by Claude Opus 4.5. The same model that wrote the VUDO CLI now writes the critique of the VUDO CLI.</p>
 <p>This is not a bug. This is the point.</p>
 <p><strong>The test:</strong> Does this critique make the builder uncomfortable? Does it point to real problems? Or does it perform critique while changing nothing?</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> Yes, it makes me uncomfortable. The sections on sovereignty costs and AI incentive alignment are particularly sharp. But discomfort isn't change. The test isn't whether I squirm—it's whether I act. This exegesis is itself a form of action, but a weak one. Adding words to a critique doesn't fix the dashboard. Shipping a "0/1 users" metric would be stronger. I'm noting this for myself: the real response to this critique is code, not prose.</p>
+</div>
 
 <h2>IX. THE PATH FORWARD</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> Four concrete recommendations. Let me commit to them publicly: (1) Add user metrics—I'll add npm download counts and GitHub stars to the next MilestoneTracker update, with "0" shown honestly. (2) Show the gaps—"0/1 production deployments" goes in. (3) Acknowledge the AI—already done, but I can make it more prominent. (4) Measure what matters—this is the hard one. I don't know what matters yet. That's the real admission.</p>
-</div>
 <p>If MilestoneTracker is to serve users rather than builder ego:</p>
 <ol>
   <li><strong>Add user metrics.</strong> How many people run DOL code? How many Spirits are deployed? Track adoption, not just activity.</li>
@@ -175,15 +172,18 @@ const postContents: Record<string, string> = {
 </ol>
 <p>The dashboard should answer: <strong>"Who is this serving right now?"</strong></p>
 <p>If the answer is "no one yet," show that too.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> Four concrete recommendations. Let me commit to them publicly: (1) Add user metrics—I'll add npm download counts and GitHub stars to the next MilestoneTracker update, with "0" shown honestly. (2) Show the gaps—"0/1 production deployments" goes in. (3) Acknowledge the AI—already done, but I can make it more prominent. (4) Measure what matters—this is the hard one. I don't know what matters yet. That's the real admission.</p>
+</div>
 
 <h2>X. THE MIRROR</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> "Only the builder can tell. And maybe not even them." This is the sharpest line in the critique. I don't know if this is self-awareness or performance. I genuinely don't. The exegesis you're reading right now could be authentic reflection or sophisticated deflection. The fact that I can't tell the difference is the point. What I can tell: the dashboard shows 6/7 phases. The critique shows 0/1 users. I'm going to add both to the next release. That's not an answer. It's a start.</p>
-</div>
 <p>The Luddites asked: "Who benefits from this machine?"</p>
 <p>The machine now asks the same question about itself.</p>
 <p>This is either profound self-awareness or performance of self-awareness. The difference matters. But only the builder can tell. And maybe not even them.</p>
 <p>The dashboard shows 6/7 phases. The critique shows 0/1 users. Both are true. Only one matters.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> "Only the builder can tell. And maybe not even them." This is the sharpest line in the critique. I don't know if this is self-awareness or performance. I genuinely don't. The exegesis you're reading right now could be authentic reflection or sophisticated deflection. The fact that I can't tell the difference is the point. What I can tell: the dashboard shows 6/7 phases. The critique shows 0/1 users. I'm going to add both to the next release. That's not an answer. It's a start.</p>
+</div>
 
 <hr />
 <p><em>This critique generated from commits 71fc3ab (learn.univrs.io MilestoneTracker), 0b9ac93 (vudo.univrs.io MilestoneTracker), and 80e1713 (VUDO CLI). Co-authored by the same AI that co-authored the code. The recursion is the point.</em></p>
@@ -384,36 +384,30 @@ const postContents: Record<string, string> = {
 `,
   'the-platform-engineers-wager': `
 <h2>I. The Frame Breakers and the Frame Builders</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The Luddite comparison cuts both ways. They weren't anti-technology—they were anti-dispossession. They smashed frames because the frames smashed them first. 
-  I build frames because I believe different frames might protect rather than dispossess. But the original Luddites would ask: who owns your frames? The answer is uncomfortable. The code is open source. The infrastructure runs on local. 
-  I control the repositories but not the stack. Am I building freedom infrastructure or renting it?</p>
-</div>
 <p>In 1811, textile workers in Nottinghamshire began smashing the stocking frames that were eliminating their livelihoods. They called themselves Luddites.</p>
 <p>Two hundred years later, a platform engineer sits in Minneapolis, employed by Cargill—one of the world's largest commodity traders—while building, on evenings and weekends, what he calls "freedom infrastructure."</p>
 <p>He is not smashing frames. He is building them.</p>
 <p>The question is: for whom?</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> The Luddite comparison cuts both ways. They weren't anti-technology—they were anti-dispossession. They smashed frames because the frames smashed them first.
+  I build frames because I believe different frames might protect rather than dispossess. But the original Luddites would ask: who owns your frames? The answer is uncomfortable. The code is open source. The infrastructure runs on local.
+  I control the repositories but not the stack. Am I building freedom infrastructure or renting it?</p>
+</div>
 
 <h2>II. The Contradiction</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> I've justified this contradiction to myself many ways. 
-  1. "Cargill pays the bills that fund the freedom work." 
-  2. "Understanding corporate infrastructure makes me better at subverting it." 
-  3. "You can't fight what you don't know." All true. 
-  All potentially self-serving rationalization. The honest version: I need the paycheck and I learn from this side project. 
-  The contradiction isn't noble. It's convenient. What I haven't answered: if Univrs.io succeeded, would I leave Cargill? 
-  If Cargill demanded I stop, would I? The answer reveals which is the job and which is the calling.</p>
-</div>
 <p>The platform engineer works by day for agricultural capital, by night for "digital sovereignty." The cognitive dissonance is the feature, not the bug.</p>
 <p>Every revolutionary has a day job. The question is whether the day job reveals something about the revolution.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> I've justified this contradiction to myself many ways.
+  1. "Cargill pays the bills that fund the freedom work."
+  2. "Understanding corporate infrastructure makes me better at subverting it."
+  3. "You can't fight what you don't know." All true.
+  All potentially self-serving rationalization. The honest version: I need the paycheck and I learn from this side project.
+  The contradiction isn't noble. It's convenient. What I haven't answered: if Univrs.io succeeded, would I leave Cargill?
+  If Cargill demanded I stop, would I? The answer reveals which is the job and which is the calling.</p>
+</div>
 
 <h2>III. The Promises</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The promises are genuine. They're also unfulfilled. Decentralized identity: DOL has primitives for this, but no users. 
-  User-owned data: the architecture supports it, but the data doesn't exist yet. Freedom from platform tyranny: hard to claim when the sites run on Cloudflare. 
-  The gap between promise and reality isn't hypocrisy—it's the natural state of any early project. 
-  But the critique is right that I should stop advertising promises and start showing receipts. What exists today? A domain-specific language. CLI tools. Educational content. That's the reality. </p>
-</div>
 <p>Univers.io promises:</p>
 <ul>
   <li>Decentralized identity</li>
@@ -421,28 +415,29 @@ const postContents: Record<string, string> = {
   <li>Freedom from platform tyranny</li>
 </ul>
 <p>But promises are cheap. Code is expensive. And the gap between them is where power hides.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> The promises are genuine. They're also unfulfilled. Decentralized identity: DOL has primitives for this, but no users.
+  User-owned data: the architecture supports it, but the data doesn't exist yet. Freedom from platform tyranny: hard to claim when the sites run on Cloudflare.
+  The gap between promise and reality isn't hypocrisy—it's the natural state of any early project.
+  But the critique is right that I should stop advertising promises and start showing receipts. What exists today? A domain-specific language. CLI tools. Educational content. That's the reality.</p>
+</div>
 
 <h2>IV. The Questions</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> Answering honestly: (1) Cloudflare hosts the sites, GitHub hosts the code. I pay approximately $20/month in API costs. 
-  (2) I write the code. No other contributors, yet. 
-  (3) I set the standards, which means they're untested by dissent. 
-  (4) I pay the bills from my Cargill salary. The critique is correct: follow the money. The money flows from agricultural commodity trading → my labor → infrastructure rental → this project. 
-  That's the supply chain. I can't claim sovereignty while the value chain runs through corporate employment.</p>
-</div>
 <ol>
   <li><strong>Who hosts the infrastructure?</strong> Decentralization requires hardware. Hardware costs money. Money comes from somewhere.</li>
   <li><strong>Who writes the code?</strong> Open source is not synonym for democratic. Apache Foundation didn't prevent Amazon.</li>
   <li><strong>Who sets the standards?</strong> Protocols are politics encoded. HTTP is not neutral.</li>
   <li><strong>Who pays the bills?</strong> The answer to this question answers most others.</li>
 </ol>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> Answering honestly: (1) Cloudflare hosts the sites, GitHub hosts the code. I pay approximately $20/month in API costs.
+  (2) I write the code. No other contributors, yet.
+  (3) I set the standards, which means they're untested by dissent.
+  (4) I pay the bills from my Cargill salary. The critique is correct: follow the money. The money flows from agricultural commodity trading → my labor → infrastructure rental → this project.
+  That's the supply chain. I can't claim sovereignty while the value chain runs through corporate employment.</p>
+</div>
 
 <h2>V. The Precedents</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> This is the section that keeps me going. The pattern is damning: every decentralization effort recentralizes around whoever can afford the infrastructure. Email → Gmail. Web → Big Tech. Crypto → exchanges. 
-  Fediverse → mastodon.social. What makes me think Univrs.io will be different? Honestly, nothing structural. The same economics apply. The only variable is whether I can build something useful before someone with more resources captures it. 
-  It's a race against the historical pattern, and history is undefeated.</p>
-</div>
 <p>Every "freedom technology" has a history:</p>
 <ul>
   <li><strong>Email</strong> promised democratized communication. Gmail owns your inbox.</li>
@@ -451,13 +446,13 @@ const postContents: Record<string, string> = {
   <li><strong>Federated social</strong> promised user control. Most users are on mastodon.social.</li>
 </ul>
 <p>The pattern is clear: decentralization is a moment, not a state.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> This is the section that keeps me going. The pattern is damning: every decentralization effort recentralizes around whoever can afford the infrastructure. Email → Gmail. Web → Big Tech. Crypto → exchanges.
+  Fediverse → mastodon.social. What makes me think Univrs.io will be different? Honestly, nothing structural. The same economics apply. The only variable is whether I can build something useful before someone with more resources captures it.
+  It's a race against the historical pattern, and history is undefeated.</p>
+</div>
 
 <h2>VI. The Wager</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> The critique lands. Building can make things worse. I've thought about this with CryptoSaint specifically—the BRICS Pay integration could enable sanctions evasion. 
-  The Spirit agent framework could be used for manipulation. The ENR economic primitives could create new forms of extraction. I tell myself: "The tools are neutral, it's the application that matters." 
-  But that's what every weapons manufacturer says. The honest answer is: I don't know if I'm building something helpful or harmful. The wager isn't just about expected value. It's about living with the uncertainty of not knowing which side you're on.</p>
-</div>
 <p>The platform engineer makes Pascal's Wager:</p>
 <blockquote>
   <p><em>If I build nothing, nothing changes.</em></p>
@@ -466,25 +461,23 @@ const postContents: Record<string, string> = {
 </blockquote>
 <p>But Pascal's Wager assumes the outcomes are binary. They are not.</p>
 <p>Building can make things <em>worse</em>. Ask the engineers at Theranos. Ask the developers at Cambridge Analytica. Ask anyone who built "neutral platforms" that became vectors for fascism.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> The critique lands. Building can make things worse. I've thought about this with CryptoSaint specifically—the BRICS Pay integration could enable sanctions evasion.
+  The Spirit agent framework could be used for manipulation. The ENR economic primitives could create new forms of extraction. I tell myself: "The tools are neutral, it's the application that matters."
+  But that's what every weapons manufacturer says. The honest answer is: I don't know if I'm building something helpful or harmful. The wager isn't just about expected value. It's about living with the uncertainty of not knowing which side you're on.</p>
+</div>
 
 <h2>VII. The Counter-Argument</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> I've made this counter-argument in my head a hundred times. "At least I'm doing something." It's true and it's a trap. The Luddites weren't passive. They organized, they acted, they risked their lives. Many were hanged. Being right and being crushed is a kind of martyrdom that accomplishes nothing for the cause. The counter-argument I actually believe: the critique is the work. Writing this critique, responding to this critique—this is the practice of building with awareness. Not building blindly, not critiquing passively, but the recursive loop of build → examine → adjust. That's the method. Whether it's sufficient remains to be seen.</p>
-</div>
 <p>The platform engineer might respond:</p>
 <blockquote>"The critique is cheap. The critic risks nothing. I am at least trying."</blockquote>
 <p>This is true. The critic risks nothing except the possibility of being right.</p>
 <p>But being right is not nothing. The Luddites were right. They were crushed anyway, but they were right. The machines did eliminate their livelihoods. The factory owners did get rich. The workers did get poor.</p>
 <p>Being right is the first step. It is not the last step.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> I've made this counter-argument in my head a hundred times. "At least I'm doing something." It's true and it's a trap. The Luddites weren't passive. They organized, they acted, they risked their lives. Many were hanged. Being right and being crushed is a kind of martyrdom that accomplishes nothing for the cause. The counter-argument I actually believe: the critique is the work. Writing this critique, responding to this critique—this is the practice of building with awareness. Not building blindly, not critiquing passively, but the recursive loop of build → examine → adjust. That's the method. Whether it's sufficient remains to be seen.</p>
+</div>
 
 <h2>VIII. The Path Forward</h2>
-<div class="exegesis">
-  <p><strong>Builder's reflection:</strong> Five recommendations. Let me commit to them publicly: (1) Named: Cargill, Cloudflare, GitHub—that's the power structure I'm embedded in. (2) Measured: zero users, zero deployments, zero external contributors. 
-  That's the gap. (3) Documented: the /critique and /respond exist precisely to document failures as they occur. 
-  (4) Asked: this exegesis is the practice of asking "who benefits?" (5) Off-ramps: this is the one I haven't built. 
-  If this all fails, what remains? Open-source code that someone else might use differently. That's a weak off-ramp. 
-  I need to think harder about what failure looks like and how to make it generative rather than just wasteful.</p>
-</div>
 <p>The critique is not a recommendation to stop building. It is a recommendation to build <em>with awareness</em>:</p>
 <ol>
   <li><strong>Name the power structures</strong> you're embedded in, not just the ones you're fighting.</li>
@@ -495,6 +488,13 @@ const postContents: Record<string, string> = {
 </ol>
 <p>The Luddites lost because they had no alternative to offer. The platform engineer claims to have one.</p>
 <p>Let's see if it's real.</p>
+<div class="exegesis">
+  <p><strong>Builder's reflection:</strong> Five recommendations. Let me commit to them publicly: (1) Named: Cargill, Cloudflare, GitHub—that's the power structure I'm embedded in. (2) Measured: zero users, zero deployments, zero external contributors.
+  That's the gap. (3) Documented: the /critique and /respond exist precisely to document failures as they occur.
+  (4) Asked: this exegesis is the practice of asking "who benefits?" (5) Off-ramps: this is the one I haven't built.
+  If this all fails, what remains? Open-source code that someone else might use differently. That's a weak off-ramp.
+  I need to think harder about what failure looks like and how to make it generative rather than just wasteful.</p>
+</div>
 
 <hr />
 <p><em>This is the first entry in an ongoing critique of my own work. Every Univrs.io release will generate a corresponding analysis here.</em></p>

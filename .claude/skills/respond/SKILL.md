@@ -19,10 +19,13 @@ The critique is not a verdict—it's an invitation to dialogue. This skill facil
 
 ## The Exegesis Pattern
 
+The exegesis comes **after** the critique content, not before. Readers need to see the argument first, then the reflection.
+
 ```html
 <h2>III. WHO BECOMES THE HUB?</h2>
 <p>The critical question: what determines whether
 an agent becomes a Hub or stays Dormant?</p>
+<p>Connectivity requires resources...</p>
 
 <div class="exegesis">
   <p><strong>Builder's reflection:</strong> This cuts to the heart of
@@ -31,11 +34,9 @@ an agent becomes a Hub or stays Dormant?</p>
   The Revival module was meant to address this—but does it?
   <code>src/revival/redistribution.rs</code> needs review.</p>
 </div>
-
-<p>Connectivity requires resources...</p>
 ```
 
-The critique remains intact. The exegesis adds **depth**, not defense.
+The critique comes first. The exegesis responds. This preserves narrative flow.
 
 ## Invocation
 
@@ -85,7 +86,7 @@ For each section, generate a reflection that asks:
 git checkout -b respond/[slug]-[date]
 
 # Edit src/posts/data.ts
-# Insert <div class="exegesis">...</div> after each <h2>
+# Insert <div class="exegesis">...</div> at END of each section (before next <h2>)
 
 # Commit
 git add src/posts/data.ts
@@ -212,7 +213,7 @@ When generating a response:
 1. **Create feature branch** - `respond/[slug]-YYYY-MM-DD`
 2. **Parse critique** - Find all Roman numeral sections
 3. **Generate exegesis** - Draft reflection for each section
-4. **Insert into HTML** - After each `<h2>`, before content
+4. **Insert into HTML** - At END of each section, before next `<h2>`
 5. **Create PR** - With checklist of sections
 6. **Return to main** - Leave PR open for editing
 7. **Report PR URL** - Builder reviews in GitHub
