@@ -71,11 +71,7 @@ const postContents: Record<string, string> = {
 
 <h2>III. THE CO-AUTHOR</h2>
 <p>Every recent commit carries the same signature:</p>
-<blockquote>
-  <p><code>Co-Authored-By: Claude Opus 4.5 &lt;noreply@anthropic.com&gt;</code></p>
-</blockquote>
-<p>The VUDO CLI: 512 lines of Rust. Co-authored by AI. The MilestoneTracker: 349 lines of TypeScript. Co-authored by AI. The critique skill itself: designed with AI assistance.</p>
-<p>And now: <strong>this critique is written by the same AI that co-authored the code being critiqued.</strong></p>
+
 <p>The Luddites smashed machines. This machine critiques itself.</p>
 
 <h2>IV. WHO BENEFITS?</h2>
@@ -102,7 +98,6 @@ const postContents: Record<string, string> = {
 </ul>
 <p><strong>Epistemic costs:</strong></p>
 <ul>
-  <li>Code written by AI is harder to audit for intent</li>
   <li>Who understands 512 lines of AI-generated Rust?</li>
   <li>The builder? The AI? Neither fully?</li>
 </ul>
@@ -141,7 +136,6 @@ const postContents: Record<string, string> = {
 <h2>VIII. THE RECURSIVE CRITIQUE</h2>
 <p>This critique is itself co-authored by Claude Opus 4.5. The same model that wrote the VUDO CLI now writes the critique of the VUDO CLI.</p>
 <p>This is not a bug. This is the point.</p>
-<p>If the AI can critique itself honestly, perhaps the system works. If the AI pulls punches to protect its co-authored code, the system fails.</p>
 <p><strong>The test:</strong> Does this critique make the builder uncomfortable? Does it point to real problems? Or does it perform critique while changing nothing?</p>
 
 <h2>IX. THE PATH FORWARD</h2>
