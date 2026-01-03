@@ -46,6 +46,15 @@
       "gaps": [
         "No auto-registration mechanism for project skills"
       ]
+    },
+    "commitments": {
+      "invocations": 1,
+      "lastUsed": "2026-01-02",
+      "prsGenerated": 0,
+      "successRate": 1.0,
+      "commitmentsTracked": 11,
+      "commitmentsFulfilled": 0,
+      "gaps": []
     }
   },
   "identifiedGaps": [
@@ -81,7 +90,7 @@
       "proposedSkill": null,
       "priority": "medium",
       "status": "resolved",
-      "resolution": "All 4 skills now symlinked: critique, respond, evolve, ecosystem-health"
+      "resolution": "All 5 skills now symlinked: critique, respond, evolve, ecosystem-health, commitments"
     },
     {
       "id": "gap-005",
@@ -97,7 +106,8 @@
       "source": "evolve-cycle-5",
       "proposedSkill": "commitments",
       "priority": "high",
-      "status": "identified"
+      "status": "resolved",
+      "resolution": "/commitments skill created with 11 initial commitments tracked in commitments.json"
     }
   ],
   "critiquePatterns": {

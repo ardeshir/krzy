@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "lastAudit": "2026-01-02",
+  "commitments": [
+    {
+      "id": "commit-001",
+      "source": "the-progress-machine/ii",
+      "statement": "Add npm download counts and GitHub stars to MilestoneTracker with '0' shown honestly",
+      "category": "code",
+      "target": "learn.univrs.io",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-002",
+      "source": "the-progress-machine/vi",
+      "statement": "Show '0/1 production deployments' in dashboard",
+      "category": "code",
+      "target": "learn.univrs.io",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-003",
+      "source": "the-hyphal-hierarchy/viii",
+      "statement": "Add /status command showing role, priority, path to advancement",
+      "category": "code",
+      "target": "univrs-network",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-004",
+      "source": "the-hyphal-hierarchy/viii",
+      "statement": "Explore UBI-style credit distribution for dormant nodes",
+      "category": "code",
+      "target": "univrs-enr",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-005",
+      "source": "the-hyphal-hierarchy/viii",
+      "statement": "Implement Gini coefficient measurement for network inequality",
+      "category": "code",
+      "target": "univrs-enr",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-006",
+      "source": "the-brics-bridge/ii",
+      "statement": "Make fee distribution DAO-controlled, not hardcoded constants",
+      "category": "code",
+      "target": "cryptosaint.io",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-007",
+      "source": "the-brics-bridge/v",
+      "statement": "Emergency alerts to all participants, not just stakers",
+      "category": "code",
+      "target": "cryptosaint.io",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-008",
+      "source": "the-brics-bridge/vi",
+      "statement": "Invert tier system: bioregional weight >= satellite weight in ecological_gia.rs",
+      "category": "code",
+      "target": "cryptosaint.io",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-009",
+      "source": "the-brics-bridge/ix",
+      "statement": "Add governance.rs to CryptoSaint specifying who proposes, who votes, quorum rules",
+      "category": "code",
+      "target": "cryptosaint.io",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-010",
+      "source": "the-brics-bridge/viii",
+      "statement": "Publish model assumptions as DOL schemas, not hidden in ML weights",
+      "category": "docs",
+      "target": "univrs-dol",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-011",
+      "source": "the-brics-bridge/viii",
+      "statement": "Document BRICS alignment explicitly in CryptoSaint README",
+      "category": "docs",
+      "target": "cryptosaint.io",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-02",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "fulfilled": 0,
+    "inProgress": 0,
+    "unfulfilled": 11
+  },
+  "byTarget": {
+    "cryptosaint.io": 5,
+    "univrs-enr": 2,
+    "univrs-network": 1,
+    "univrs-dol": 1,
+    "learn.univrs.io": 2
+  },
+  "byCategory": {
+    "code": 9,
+    "docs": 2
+  }
+}
