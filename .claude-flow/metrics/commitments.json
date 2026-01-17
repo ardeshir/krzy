@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastAudit": "2026-01-16",
+  "lastAudit": "2026-01-17",
   "commitments": [
     {
       "id": "commit-001",
@@ -193,33 +193,110 @@
       "dateFulfilled": null,
       "linkedPR": null,
       "linkedIssue": null
+    },
+    {
+      "id": "commit-017",
+      "source": "the-clarity-doctrine/v",
+      "statement": "Future release notes will be clearer about what 'compatible' actually means (migration path with deadline, not permanent support)",
+      "category": "docs",
+      "target": "univrs-docs/releases",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-17",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-018",
+      "source": "the-clarity-doctrine/x",
+      "statement": "Future release notes will say 'Rust-aligned' not just 'clearer' - name the trade-off explicitly",
+      "category": "docs",
+      "target": "univrs-docs/releases",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-17",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-019",
+      "source": "the-clarity-doctrine/x",
+      "statement": "Reconsider indefinite support for old syntax (gene/exegesis/constraint) - compiler can handle both",
+      "category": "code",
+      "target": "univrs-dol",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-17",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-020",
+      "source": "the-clarity-doctrine/x",
+      "statement": "Find real users before the next breaking change - no more changing syntax for ghosts",
+      "category": "governance",
+      "target": "ecosystem",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-17",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-021",
+      "source": "the-clarity-doctrine/x",
+      "statement": "Preserve DOL identity: keep 'fun' instead of Rust's 'fn' to maintain distinctiveness",
+      "category": "code",
+      "target": "univrs-dol",
+      "status": "fulfilled",
+      "dateExtracted": "2026-01-17",
+      "dateFulfilled": "2026-01-17",
+      "linkedPR": null,
+      "linkedIssue": null,
+      "verificationNote": "Confirmed: DOL v0.8.0 uses 'fun' keyword, not 'fn'. Verified in learn.univrs.io tutorials."
+    },
+    {
+      "id": "commit-022",
+      "source": "the-clarity-doctrine/xii",
+      "statement": "Critique v0.9.0 BEFORE deployment, not after - write release notes, generate critique, respond, then decide whether to ship",
+      "category": "governance",
+      "target": "release-process",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-17",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
     }
   ],
   "summary": {
-    "total": 16,
-    "fulfilled": 0,
+    "total": 22,
+    "fulfilled": 1,
     "inProgress": 0,
-    "unfulfilled": 16
+    "unfulfilled": 21
   },
   "bySource": {
     "the-progress-machine": 2,
     "the-hyphal-hierarchy": 3,
     "the-brics-bridge": 6,
-    "the-geometry-of-ambition": 5
+    "the-geometry-of-ambition": 5,
+    "the-clarity-doctrine": 6
   },
   "byTarget": {
     "cryptosaint.io": 5,
     "univrs-enr": 2,
     "univrs-network": 1,
-    "univrs-dol": 2,
+    "univrs-dol": 3,
     "learn.univrs.io": 2,
     "docs/blueprints": 1,
     "docs/blueprints/GDL-INTEGRATION-BLUEPRINT.md": 2,
-    "ecosystem-health skill": 1
+    "ecosystem-health skill": 1,
+    "univrs-docs/releases": 2,
+    "ecosystem": 1,
+    "release-process": 1
   },
   "byCategory": {
-    "code": 11,
-    "docs": 3,
-    "governance": 2
+    "code": 12,
+    "docs": 5,
+    "governance": 5
   }
 }
