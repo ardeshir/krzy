@@ -427,6 +427,29 @@ Add to evolution cycle metrics:
 3. Add distance functions per manifold type
 4. Compile to Rust with nalgebra integration
 
+---
+
+### Phase 1 Exit Criteria (MUST PASS BEFORE PHASE 2)
+
+**Do not proceed to Phase 2 unless ALL of these conditions are met:**
+
+| Criterion | Measurement | Threshold |
+|-----------|-------------|-----------|
+| **Real users exist** | Count of non-builder users | ≥ 3 |
+| **Users request this** | Feature requests mentioning topology/geometry | ≥ 1 |
+| **Phase 1 is used** | Invocations of Phase 1 features by non-builders | ≥ 10 |
+| **Phase 1 provides value** | User feedback indicating utility | Positive |
+| **Simpler alternatives exhausted** | Documented attempts at simpler solutions | Yes |
+
+**Automatic disqualification:**
+- If 6 months pass without meeting user threshold → Do not proceed
+- If builder is the only one who understands the output → Do not proceed
+- If Phase 1 features are unused → Do not proceed
+
+**The honest question:** *If no one is using Phase 1, why would Phase 2 be different?*
+
+---
+
 ### Phase 2: Spectral Analysis (Diagnostics)
 
 1. Implement `GraphLaplacian` entity
