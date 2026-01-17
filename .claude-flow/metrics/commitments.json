@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastAudit": "2026-01-02",
+  "lastAudit": "2026-01-16",
   "commitments": [
     {
       "id": "commit-001",
@@ -133,23 +133,93 @@
       "dateFulfilled": null,
       "linkedPR": null,
       "linkedIssue": null
+    },
+    {
+      "id": "commit-012",
+      "source": "the-geometry-of-ambition/ix",
+      "statement": "Extract self-critique questions into standalone checklist accessible without reading full blueprint",
+      "category": "docs",
+      "target": "docs/blueprints",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-16",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-013",
+      "source": "the-geometry-of-ambition/x",
+      "statement": "Plain language first: any /topology-health output leads with natural language summaries, eigenvalues in appendix",
+      "category": "code",
+      "target": "ecosystem-health skill",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-16",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-014",
+      "source": "the-geometry-of-ambition/x",
+      "statement": "Build simple version first: implement only algebraic connectivity, test if it helps before adding more metrics",
+      "category": "code",
+      "target": "univrs-dol",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-16",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-015",
+      "source": "the-geometry-of-ambition/x",
+      "statement": "Resist complexity creep: Phase 1 only, with explicit criteria for whether Phase 2 is needed",
+      "category": "governance",
+      "target": "docs/blueprints/GDL-INTEGRATION-BLUEPRINT.md",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-16",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
+    },
+    {
+      "id": "commit-016",
+      "source": "the-geometry-of-ambition/xii",
+      "statement": "Archive GDL blueprint, revisit only when network has actual participants to analyze",
+      "category": "governance",
+      "target": "docs/blueprints/GDL-INTEGRATION-BLUEPRINT.md",
+      "status": "unfulfilled",
+      "dateExtracted": "2026-01-16",
+      "dateFulfilled": null,
+      "linkedPR": null,
+      "linkedIssue": null
     }
   ],
   "summary": {
-    "total": 11,
+    "total": 16,
     "fulfilled": 0,
     "inProgress": 0,
-    "unfulfilled": 11
+    "unfulfilled": 16
+  },
+  "bySource": {
+    "the-progress-machine": 2,
+    "the-hyphal-hierarchy": 3,
+    "the-brics-bridge": 6,
+    "the-geometry-of-ambition": 5
   },
   "byTarget": {
     "cryptosaint.io": 5,
     "univrs-enr": 2,
     "univrs-network": 1,
-    "univrs-dol": 1,
-    "learn.univrs.io": 2
+    "univrs-dol": 2,
+    "learn.univrs.io": 2,
+    "docs/blueprints": 1,
+    "docs/blueprints/GDL-INTEGRATION-BLUEPRINT.md": 2,
+    "ecosystem-health skill": 1
   },
   "byCategory": {
-    "code": 9,
-    "docs": 2
+    "code": 11,
+    "docs": 3,
+    "governance": 2
   }
 }
