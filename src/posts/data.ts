@@ -8,6 +8,13 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'the-clarity-doctrine',
+    title: 'The Clarity Doctrine',
+    subtitle: 'On Syntax, Standards, and Whose Clarity Counts',
+    date: '2026-01-17',
+    tags: ['critique', 'dol', 'power', 'precedents', 'governance'],
+  },
+  {
     slug: 'the-geometry-of-ambition',
     title: 'The Geometry of Ambition',
     subtitle: 'On Eigenvalues, Expertise, and the New Priesthood',
@@ -45,6 +52,159 @@ export const posts: Post[] = [
 ]
 
 const postContents: Record<string, string> = {
+  'the-clarity-doctrine': `
+<h2>I. THE NAME</h2>
+<p>DOL v0.8.0 is called <strong>Clarity</strong>. The name is not neutral.</p>
+<p>To name a release "Clarity" is to claim that what came before was unclear. That <code>gene</code> was muddy and <code>gen</code> is clean. That <code>Int64</code> was opaque and <code>i64</code> is transparent. That <code>exegesis</code> was obscure and <code>docs</code> is plain.</p>
+<p>But clarity is not objective. It is cultural. What is clear depends on what you already know.</p>
+<p>For a Rust programmer, <code>i64</code> is crystal clear—it's the type they use every day. For a domain expert writing ontologies, <code>Int64</code> might be clearer—explicit, self-documenting, no assumed context.</p>
+<p>The question is not "Is v0.8.0 clearer?" The question is: <strong>Clearer for whom?</strong></p>
+
+<h2>II. THE CHANGES</h2>
+<p>DOL v0.8.0 introduces systematic renaming:</p>
+<ul>
+  <li><code>gene</code> → <code>gen</code> — The foundational declaration type</li>
+  <li><code>constraint</code> → <code>rule</code> — Constraint declarations</li>
+  <li><code>evolves</code> → <code>evo</code> — Evolution declarations</li>
+  <li><code>exegesis</code> → <code>docs</code> — Documentation blocks</li>
+  <li><code>Int64</code> → <code>i64</code>, <code>Float64</code> → <code>f64</code> — Primitive types</li>
+  <li><code>String</code> → <code>string</code>, <code>Bool</code> → <code>bool</code> — Common types</li>
+</ul>
+<p>The stated rationale: <em>"Rust alignment."</em> DOL compiles to Rust, so DOL should look like Rust.</p>
+<p>But DOL was designed to be <em>different</em> from Rust. The original keywords—<code>gene</code>, <code>exegesis</code>, <code>constraint</code>—carried semantic weight. A <code>gene</code> is not just a type; it's a unit of ontological inheritance. An <code>exegesis</code> is not just documentation; it's interpretive commentary on meaning.</p>
+<p>Now these become <code>gen</code> and <code>docs</code>. Shorter. More familiar. Less distinctive.</p>
+
+<h2>III. WHO BENEFITS?</h2>
+<p><strong>From the syntax changes:</strong></p>
+<ul>
+  <li>The builder — easier to switch between DOL and Rust mentally</li>
+  <li>Future Rust developers — lower cognitive barrier to entry</li>
+  <li>The compiler pipeline — simpler DOL→Rust type mapping</li>
+  <li>Documentation writers — less explaining why DOL is "different"</li>
+</ul>
+<p><strong>Who doesn't benefit?</strong></p>
+<ul>
+  <li>Those who valued DOL's distinctive vocabulary</li>
+  <li>Domain experts who found <code>Int64</code> more readable than <code>i64</code></li>
+  <li>Users (if any existed) who must now migrate</li>
+  <li>The language's unique identity</li>
+</ul>
+<p><strong>The asymmetry:</strong> The beneficiaries are hypothetical future users. The cost-bearers are the current ecosystem—three sites just updated 70+ files to comply with v0.8.0 syntax.</p>
+<p><strong>Red flag:</strong> When benefits flow to hypothetical futures while costs fall on the present, ask who is making that trade-off and why.</p>
+
+<h2>IV. WHO PAYS?</h2>
+<p><strong>Migration costs:</strong></p>
+<ul>
+  <li>learn.univrs.io: 61 files updated</li>
+  <li>vudo.univrs.io: 4 files updated</li>
+  <li>univrs-docs: 8+ files updated</li>
+  <li>Total: ~750 lines of changes across the ecosystem</li>
+</ul>
+<p><strong>Cognitive costs:</strong></p>
+<ul>
+  <li>Anyone who learned DOL v0.7 must unlearn and relearn</li>
+  <li>The distinctive vocabulary (<code>gene</code>, <code>exegesis</code>) was <em>memorable</em>—now it's generic</li>
+  <li>Code examples in any external documentation are now outdated</li>
+</ul>
+<p><strong>Identity costs:</strong></p>
+<ul>
+  <li><code>gene</code> evoked biology, inheritance, evolution—intentionally</li>
+  <li><code>gen</code> is just an abbreviation</li>
+  <li><code>exegesis</code> invoked hermeneutics, interpretation, scholarly tradition</li>
+  <li><code>docs</code> is... documentation</li>
+</ul>
+<p>The language becomes more conventional. Whether that's a benefit or a cost depends on whether you valued the unconventionality.</p>
+
+<h2>V. PROMISE VS. REALITY</h2>
+<blockquote>
+  <p><em>Promise: "Clarity"</em></p>
+  <p><em>Reality: Clarity for Rust programmers</em></p>
+</blockquote>
+<blockquote>
+  <p><em>Promise: "Modernized syntax"</em></p>
+  <p><em>Reality: Conformity to Rust conventions</em></p>
+</blockquote>
+<blockquote>
+  <p><em>Promise: "Full backward compatibility"</em></p>
+  <p><em>Reality: "Deprecation warnings → errors → removal"</em></p>
+</blockquote>
+<p>The release notes say: <em>"All v0.8.0 changes are fully backward compatible."</em></p>
+<p>The deprecation timeline says: <em>"v0.8.0: warnings. v0.9.0: errors in strict mode. v1.0.0: old syntax removed."</em></p>
+<p>This is not full backward compatibility. It is <strong>managed obsolescence</strong>. The old syntax works today so you have time to migrate before it doesn't work tomorrow.</p>
+<p>Managed obsolescence is a reasonable approach to language evolution. But calling it "full backward compatibility" obscures the power dynamic: the builder decides when your code breaks.</p>
+
+<h2>VI. THE PRECEDENT</h2>
+<p>Language syntax migrations have a history:</p>
+<ul>
+  <li><strong>Python 2 → 3:</strong> Took over a decade. Split the community. Some projects never migrated.</li>
+  <li><strong>Perl 5 → 6:</strong> Became a different language entirely (Raku). The migration never happened.</li>
+  <li><strong>JavaScript ES5 → ES6:</strong> Transpilers (Babel) enabled gradual adoption. Smoother, but created tooling dependency.</li>
+  <li><strong>C → C++:</strong> Backward compatible, but the idioms diverged so far that "C with classes" became its own culture.</li>
+</ul>
+<p>The pattern: <strong>Syntax changes benefit the language designers' vision at the cost of existing users' muscle memory.</strong></p>
+<p>DOL has no existing users (beyond the builder). So the cost of v0.8.0 is ~750 lines of documentation updates, not broken production systems.</p>
+<p>This is both a luxury and a warning. The luxury: migrations are cheap when no one uses your software. The warning: <strong>you're optimizing syntax for users who don't exist while the user count remains zero.</strong></p>
+
+<h2>VII. THE POWER STRUCTURE</h2>
+<p><strong>Who decided Rust was the standard?</strong></p>
+<p>The builder. DOL was created by one person. That person works in Rust daily. The "Rust alignment" reflects the builder's fluency, not a community consensus.</p>
+<p><strong>Who set the deprecation timeline?</strong></p>
+<p>The builder. v0.8 → v0.9 → v1.0 is an arbitrary schedule. Three versions until your old code breaks. Why three? Because it felt reasonable.</p>
+<p><strong>Who decided "clarity" meant Rust conventions?</strong></p>
+<p>The builder. The name "Clarity" implies a universal standard. But clarity is contextual. For a philosopher, <code>exegesis</code> is clear. For a Rust developer, <code>docs</code> is clear. The release chose one community's clarity over another's.</p>
+<p><strong>The governance question:</strong> In an ecosystem with one contributor, language evolution is autocratic by necessity. This isn't wrong—it's early-stage reality. But the critique notes: when users eventually arrive, will they have voice in syntax decisions? Or will "Rust alignment" be the permanent doctrine?</p>
+
+<h2>VIII. THE MIGRATION TOOL</h2>
+<p>DOL v0.8.0 includes <code>dol-migrate</code>—a tool that automatically converts old syntax to new:</p>
+<pre><code>dol-migrate 0.7-to-0.8 --diff src/</code></pre>
+<p>This is good practice. It acknowledges the migration burden and provides assistance.</p>
+<p>But the tool also reveals the scale of change. Automated migration is necessary because the changes are too numerous for manual editing. If the syntax changes were minor, no tool would be needed.</p>
+<p>The migration tool is both a courtesy and an admission: <strong>we changed enough that you need automation to keep up.</strong></p>
+
+<h2>IX. THE TREE SHAKING</h2>
+<p>Alongside syntax changes, v0.8.0 introduces tree shaking—dead code elimination:</p>
+<pre><code>dol-parse --tree-shake example.dol</code></pre>
+<p>This is a pure improvement. Smaller output. No semantic changes. No migration burden.</p>
+<p>The contrast is instructive. Tree shaking benefits everyone who uses DOL without requiring anyone to change their code. Syntax changes benefit future Rust developers while requiring present users to migrate.</p>
+<p>One is additive. One is substitutive. The release does both, but calls itself "Clarity"—emphasizing the substitution over the addition.</p>
+
+<h2>X. THE PATH FORWARD</h2>
+<p>The critique is not a verdict against v0.8.0. The syntax changes are defensible. Rust alignment reduces cognitive switching. Shorter keywords are easier to type. Migration tooling softens the transition.</p>
+<p>But the critique asks for awareness:</p>
+<ol>
+  <li><strong>Name the trade-off.</strong> "Clarity" is not neutral. Say: "Rust-aligned syntax" and let users judge whether that's clearer for them.</li>
+  <li><strong>Question the timeline.</strong> Why deprecate the old syntax at all? If <code>gene</code> and <code>gen</code> both work, why force a choice? Perl kept <code>unless</code> alongside <code>if (!...)</code> for decades.</li>
+  <li><strong>Track the cost.</strong> 750 lines changed across three sites. That's the ecosystem cost of this release. Is the "Rust alignment" benefit worth 750 lines of churn?</li>
+  <li><strong>Ask who's missing.</strong> No external users were consulted because none exist. The syntax was changed for hypothetical Rust developers. Will those developers arrive? Will they care about i64 vs Int64?</li>
+  <li><strong>Preserve the identity.</strong> <code>exegesis</code> was interesting. <code>docs</code> is forgettable. The distinctive vocabulary was a feature, not a bug. Consider whether "Rust alignment" is worth the loss of linguistic character.</li>
+</ol>
+
+<h2>XI. THE DOCTRINE</h2>
+<p>v0.8.0 establishes a doctrine: <strong>DOL shall look like Rust.</strong></p>
+<p>This doctrine has implications:</p>
+<ul>
+  <li>Future syntax decisions will favor Rust conventions</li>
+  <li>Developers from other language traditions (Python, JavaScript, Haskell) face higher barriers</li>
+  <li>DOL's identity becomes "Rust for ontologies" rather than "a language for ontologies"</li>
+  <li>The ecosystem inherits Rust's cultural assumptions about what "clarity" means</li>
+</ul>
+<p>Doctrines are not wrong. Every language has a philosophy. Rust's philosophy is "fearless concurrency" and explicit memory management. Python's philosophy is "there should be one obvious way to do it." Go's philosophy is "simplicity over expressiveness."</p>
+<p>DOL's emerging doctrine: <strong>Rust alignment as clarity.</strong></p>
+<p>The critique does not reject this doctrine. It names it. Naming is the first step toward examining whether it serves the mission or constrains it.</p>
+
+<h2>XII. THE MIRROR</h2>
+<p>This critique is being generated on the same day v0.8.0 was deployed across all ecosystem sites. The syntax changes went live hours ago.</p>
+<p>The builder did not pause to critique before deploying. The changes were made, the sites were updated, and only then did the examination begin.</p>
+<p>This is the normal order: build, then reflect. Ship, then examine. Move fast, then ask whether you broke anything.</p>
+<p>The critique arrives after the fact. The doctrine is already established. The question now is not "should we make these changes?" but "having made them, what do they reveal about our values?"</p>
+<p>The answer: <strong>We value Rust familiarity over linguistic distinctiveness. We value future developers over present identity. We value convention over invention.</strong></p>
+<p>Whether those values serve the Univrs.io mission—ontology-first development, digital sovereignty, freedom infrastructure—remains to be seen.</p>
+<p>The syntax is clear. The direction is set. The doctrine is named.</p>
+<p>Now the question is: <strong>What comes next?</strong></p>
+
+<hr />
+<p><em>This critique generated from DOL v0.8.0 "Clarity" release notes and ecosystem deployment commits (univrs-docs 3a43a00, learn.univrs.io ae4ab10, vudo.univrs.io 5037739). The syntax is deployed. The examination continues.</em></p>
+`,
   'the-geometry-of-ambition': `
 <h2>I. THE BLUEPRINT</h2>
 <p>A new document appears in <code>docs/blueprints/</code>: the <strong>GDL Integration Blueprint</strong>. 545 lines proposing to enhance the Univrs.io ecosystem with Geometric Deep Learning concepts borrowed from DeepMind's weather prediction systems.</p>
