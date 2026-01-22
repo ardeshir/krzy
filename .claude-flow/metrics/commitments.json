@@ -104,11 +104,12 @@
       "statement": "Add governance.rs to CryptoSaint specifying who proposes, who votes, quorum rules",
       "category": "code",
       "target": "cryptosaint.io",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-02",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Created 764-line governance.rs with ProposalRules, VotingRules, QuorumRules, DecisionScope, TimingRules. Includes GovernanceEngine and 'Hard Questions' section. Commit f690c43."
     },
     {
       "id": "commit-010",
@@ -116,11 +117,12 @@
       "statement": "Publish model assumptions as DOL schemas, not hidden in ML weights",
       "category": "docs",
       "target": "univrs-dol",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-02",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Created schemas/model-assumptions.dol in cryptosaint.io with 400+ lines documenting all hardcoded constants: reputation bounds, credit tiers, consensus params, network config. Commit 259fee4."
     },
     {
       "id": "commit-011",
@@ -128,11 +130,12 @@
       "statement": "Document BRICS alignment explicitly in CryptoSaint README",
       "category": "docs",
       "target": "cryptosaint.io",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-02",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "README.md created with BRICS Alignment section explaining rationale, caveats, and geopolitical context. Commit 070b77e."
     },
     {
       "id": "commit-012",
@@ -140,11 +143,12 @@
       "statement": "Extract self-critique questions into standalone checklist accessible without reading full blueprint",
       "category": "docs",
       "target": "docs/blueprints",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-16",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Created SELF-CRITIQUE-CHECKLIST.md with 10 questions to answer before implementing any blueprint. Commit 0f2ad7a."
     },
     {
       "id": "commit-013",
@@ -152,11 +156,12 @@
       "statement": "Plain language first: any /topology-health output leads with natural language summaries, eigenvalues in appendix",
       "category": "code",
       "target": "ecosystem-health skill",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-16",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Updated SKILL.md with Output Format Principles section and restructured thermo output to SUMMARY→DETAILS→APPENDIX format. Technical metrics now in appendix. Commit 08437db in univrs-skills."
     },
     {
       "id": "commit-014",
@@ -176,11 +181,12 @@
       "statement": "Resist complexity creep: Phase 1 only, with explicit criteria for whether Phase 2 is needed",
       "category": "governance",
       "target": "docs/blueprints/GDL-INTEGRATION-BLUEPRINT.md",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-16",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Added Phase 1 Exit Criteria section with 5 measurable thresholds and 3 automatic disqualifiers. Commit 6442ac4."
     },
     {
       "id": "commit-016",
@@ -200,11 +206,12 @@
       "statement": "Future release notes will be clearer about what 'compatible' actually means (migration path with deadline, not permanent support)",
       "category": "docs",
       "target": "univrs-docs/releases",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-17",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Created RELEASE-NOTES-TEMPLATE.md with explicit 'What Backward Compatible Actually Means' section and deprecation timeline requirements. Commit 46e17db."
     },
     {
       "id": "commit-018",
@@ -212,11 +219,12 @@
       "statement": "Future release notes will say 'Rust-aligned' not just 'clearer' - name the trade-off explicitly",
       "category": "docs",
       "target": "univrs-docs/releases",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-17",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Template includes required Trade-offs table with 'Who Benefits / Who Pays' columns, anti-pattern examples showing 'Rust-aligned' vs vague 'clearer'. Commit 46e17db."
     },
     {
       "id": "commit-019",
@@ -261,18 +269,19 @@
       "statement": "Critique v0.9.0 BEFORE deployment, not after - write release notes, generate critique, respond, then decide whether to ship",
       "category": "governance",
       "target": "release-process",
-      "status": "unfulfilled",
+      "status": "fulfilled",
       "dateExtracted": "2026-01-17",
-      "dateFulfilled": null,
+      "dateFulfilled": "2026-01-17",
       "linkedPR": null,
-      "linkedIssue": null
+      "linkedIssue": null,
+      "verificationNote": "Added Pre-Release Critique Process section to RELEASE-NOTES-TEMPLATE.md with 7-step workflow and Critique Gate Checklist. Commit cec4078."
     }
   ],
   "summary": {
     "total": 22,
-    "fulfilled": 1,
+    "fulfilled": 10,
     "inProgress": 0,
-    "unfulfilled": 21
+    "unfulfilled": 12
   },
   "bySource": {
     "the-progress-machine": 2,
