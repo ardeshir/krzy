@@ -3,34 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0a;
-  --fg: #e0e0e0;
-  --accent: #d97706;
-  --muted: #c3cfe1;
-  --link: #33ff33;
+  --bg: #000000;
+  --fg: #f5f5f5;
+  --accent: #d4a574;
+  --muted: #888888;
+  --link: #d4a574;
+  --secondary: #a0a0a0;
+  --subtle: #666666;
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 600;
 }
 
 /* Article content styling */
 article h2 {
   font-size: 1.1rem;
-  font-weight: 500;
-  color: #f59e0b;
+  font-weight: 600;
+  color: #d4a574;
   margin-top: 3rem;
   margin-bottom: 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid #333;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
@@ -42,7 +45,7 @@ article h2:first-of-type {
 
 article h3 {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--fg);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
@@ -79,8 +82,8 @@ article hr {
 
 /* Exegesis - Builder's inline reflection */
 article .exegesis {
-  background: rgba(245, 158, 11, 0.08);
-  border-left: 2px solid #f59e0b;
+  background: rgba(212, 165, 116, 0.08);
+  border-left: 2px solid #d4a574;
   border-radius: 0 4px 4px 0;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
@@ -89,7 +92,7 @@ article .exegesis {
 
 article .exegesis p {
   margin-bottom: 0.75rem;
-  color: #d4d4d4;
+  color: #a0a0a0;
   font-style: italic;
   line-height: 1.7;
 }
@@ -99,7 +102,7 @@ article .exegesis p:last-child {
 }
 
 article .exegesis strong {
-  color: #f59e0b;
+  color: #d4a574;
   font-style: normal;
   font-weight: 500;
 }
@@ -110,7 +113,7 @@ article .exegesis code {
 }
 
 code, pre {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: Consolas, Monaco, monospace;
 }
 
 a {
@@ -120,25 +123,28 @@ a {
 
 a:hover {
   text-decoration: underline;
+  opacity: 0.9;
 }
 
 blockquote {
   border-left: 3px solid var(--accent);
   padding-left: 1rem;
   margin: 1.5rem 0;
-  color: var(--muted);
+  color: var(--secondary);
   font-style: italic;
 }
 
 code {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: Consolas, Monaco, monospace;
   background: #1a1a1a;
   padding: 0.2rem 0.4rem;
   font-size: 0.9rem;
+  color: #d4a574;
 }
 
 pre {
-  background: #1a1a1a;
+  background: #0a0a0a;
+  border: 1px solid #222;
   padding: 1rem;
   overflow-x: auto;
   margin: 1rem 0;
@@ -147,4 +153,5 @@ pre {
 pre code {
   padding: 0;
   background: none;
+  color: #a0a0a0;
 }
